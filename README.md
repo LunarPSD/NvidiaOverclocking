@@ -1,1 +1,1 @@
-# [Nvidia Overclocking Guide](NvidiaOC.md)
+# [Nvidia Overclocking Guide](NvidiaOverclocking.md)
