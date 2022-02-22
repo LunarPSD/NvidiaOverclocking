@@ -85,7 +85,8 @@ them to a profile. ![image](https://user-images.githubusercontent.com/69487009/1
   * Select all the points past the voltage you want (900 mV) by holding down shift and left click and highlighting.
   * Drag all the points down by selecting a point and dragging it down.
   * Click apply ![image](https://user-images.githubusercontent.com/69487009/155014083-1b40ab17-e804-42fc-b524-94d7eba65dc1.png) to apply the undervolt and voltage curve you set.
-  * Run a variety of workloads and games and check HWiNFO for power throttling ![image](https://user-images.githubusercontent.com/69487009/155013749-0e22d23b-4d01-4e3a-b253-374171d38ae2.png) in HWiNFO under GPU Performance Limiters.
+  * Run a variety of workloads and games and check HWiNFO for power throttling in HWiNFO under GPU Performance Limiters.
+  ![image](https://user-images.githubusercontent.com/69487009/155013749-0e22d23b-4d01-4e3a-b253-374171d38ae2.png)
   * If you are power throttling in-game, lower voltage by 25 mV, and retest. Once you are satisfied with temperatures and are not power throttling, you have found the optimum voltage.
 
 # Flashing a VBIOS
