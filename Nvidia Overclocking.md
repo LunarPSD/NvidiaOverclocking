@@ -113,7 +113,7 @@ them to a profile. ![image](https://user-images.githubusercontent.com/69487009/1
   ![image](https://user-images.githubusercontent.com/69487009/155066793-85249e79-b72a-492c-96a3-48d5e5fe5c21.png)
 
 # Flashing a VBIOS
- This section is for people who have already tested their overclocks but still want that additional headroom. Flashing a VBIOS can be very helpful as it can increase power limits which can increase overclocking headroom. It can also be risky and can void the warranty.
+ This section is for people who have already tested their overclocks but still want that additional headroom. Flashing a VBIOS can be very helpful as it can increase power limits which can increase overclocking headroom. It can also be risky and will void the warranty.
  ## VBIOS Information
   * Ensure that the card of the new VBIOS you’re flashing from has the same power connectors as the card you’re flashing to (2x8 pin, 1x12 pin, etc).
   * Check the number of HDMI and DP ports of the new VBIOS and the card you’re flashing and make sure they match. Note that this is not a mandatory step but you may lose ports if they are different.
@@ -172,11 +172,11 @@ them to a profile. ![image](https://user-images.githubusercontent.com/69487009/1
    * Some GPU backplates act as an insulator instead of a heat dissapator and replacing/removing it may be beneficial.
  * Definitions of performance limits listed in HWiNFO:
  
-  | Performance limit | Abbreviation | Definition |
-  | :------------------ | :-: | :-- |
-  | Performance limit - Power | Pwr | GPU has hit the power limit defined by its VBIOS and throttled | 
-  | Performance limit - Thermal | Thrm | GPU has hit the thermal limit and throttled |
-  | Performance limit - Reliability Voltage | vRel | Too much voltage for current temps |
-  | Performance limit - Max Operating Voltage | VOp | GPU has hit the voltage limit defined by its VBIOS |
-  | Performance limit - Utilization | Util | GPU is not under full load |
+  | Performance limit                         | Abbreviation | Definition                                                     |
+  | :---------------------------------------- | :----------: | :------------------------------------------------------------- |
+  | Performance limit - Power                 | Pwr          | GPU has hit the power limit defined by its VBIOS and throttled | 
+  | Performance limit - Thermal               | Thrm         | GPU has hit the thermal limit and throttled                    |
+  | Performance limit - Reliability Voltage   | vRel         | Too much voltage for current temps                             |
+  | Performance limit - Max Operating Voltage | VOp          | GPU has hit the voltage limit defined by its VBIOS             |
+  | Performance limit - Utilization           | Util         | GPU is not under full load                                     |
 
