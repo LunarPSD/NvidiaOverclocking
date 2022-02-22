@@ -130,7 +130,7 @@ them to a profile. ![image](https://user-images.githubusercontent.com/69487009/1
 # Miscellaneous
  ## Fixing a Boot Loop
   * Hold down shift and click restart.
-  * At the choose an option screen, go to Troubleshoot > Advanced options > Startup Settings > Restart. Finally, type 4 to boot into safe mode.
+  * At the choose an option screen, go to Troubleshoot > Advanced options > Startup Settings > Restart. Finally, type `4` to boot into safe mode.
   
   ![image](https://user-images.githubusercontent.com/69487009/155035875-c7a04198-6f72-45a8-8c81-af7b1bac496e.png)
   * Go into MSI Afterburner and uncheck this to have your overclock not applied at startup. If you have this checked, uncheck it as well.
