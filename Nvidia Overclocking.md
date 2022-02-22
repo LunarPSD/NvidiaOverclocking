@@ -49,7 +49,7 @@
   
 # Overclocking Info
  ## What is Overclocking and Undervolting?
-  * Overclocking is the process of increasing clock speeds and performance for generally higher heat and lower stability. Undervolting is the process of limiting the amount of voltage supplied to the GPU and will lower wattage, voltage, and temperatures.
+  * Overclocking is the process of increasing clock speeds and performance for generally higher heat and lower stability. For the GPU that means increasing the speed at which the core runs as well as the speed at which the VRAM runs at which are core clock speeds and memory clock speeds respectively. Undervolting is the process of limiting the amount of voltage supplied to the GPU and will lower wattage, voltage, and temperatures.
  ## Benefits of Overclocking and Undervolting
   * Overclocking can provide those extra frames or decrease the processing time in workloads and provide you with a slightly better experience. Undervolting will reduce temperatures and voltages and will provide you with a quiet and stable experience.
  ## Overclocking vs. Undervolting
@@ -68,26 +68,38 @@
   3. Download [HWiNFO](https://www.hwinfo.com/download/) and run it in [sensors only](https://cdn.discordapp.com/attachments/721078648911954103/945177008671952906/unknown.png).
   4. Go to MSI Afterburner, [max out power and temp limits](https://cdn.discordapp.com/attachments/873056719822008381/873365104442351626/unknown.png), and put the priority on the power limit. Note that laptops and some GPUs will not be able to go over 100%. This can be fixed by shunting or by [flashing a higher power limit VBIOS](#flashing-a-vbios).
  ## Finding a Core Clock
-  * Open Afterburner and raise the core clock speed using the slider in increments of 15 MHz for Turing/Ampere (30/20/16 series) or 12.5 MHz for Pascal (10 series). You will be limited by temperatures (always), and your card's power limit. There is no "limit" on how far you can overclock, however, you will know you reached the limit once you experience errors or crashes in stress tests and games. Keep in mind that an overclock can be stable in one game but not another. 
+  * Open Afterburner and put the core clock to 75 as a baseline.
   * Apply the settings ![image](https://user-images.githubusercontent.com/69487009/155014073-4aac5d7b-91d6-4b96-abd1-ab51287cb248.png) and save ![image](https://user-images.githubusercontent.com/69487009/155004968-6f7ee82e-1575-4605-9932-644e5d702d45.png)
 them to a profile. ![image](https://user-images.githubusercontent.com/69487009/155006086-5e300602-f099-4c6e-a3bf-29962b2905d2.png)
   * Click this ![image](https://user-images.githubusercontent.com/69487009/155013987-f6c7f084-c4cb-4804-bc98-1786056959a7.png) to have the overclock applied at startup.
   * Test the overclock, see if it is stable in both benchmarks and games, and monitor the temperatures using HWiNFO and stay under 80°C on the core and 95°C for hotspot.
-  * If stable, increase core clock speeds in increments of +15 MHz/12.5 MHz using the slider or by typing in a value. If the benchmarks or games crash, decrease clock speeds by the same amount and retest until you have reached stability.
+  * If stable, increase core clock speeds in increments of +15 MHz/12.5 MHz using the slider or by typing in a value. If the benchmarks or games crash, decrease clock speeds by the same amount and retest until you have reached stability. You will be limited by temperatures (always), and your card's power limit. There is no "limit" on how far you can overclock, however, you will know you reached the limit once you experience errors or crashes in stress tests and games. Keep in mind that an overclock can be stable in one game but not another.
   ## Finding a Memory Clock
-  * After you have tested the overclock sufficiently and confirmed its stability, you can start increasing the [memory clock](https://cdn.discordapp.com/attachments/721078648911954103/912854031293120583/unknown.png). Start at a memory clock of 500 MHz and increase in increments of 50-100 MHz. Note that memory clocks will usually scale much higher than core clocks (even over 1000 MHz).
+  * After you have tested the core overclock sufficiently and confirmed its stability, you can start increasing the [memory clock](https://cdn.discordapp.com/attachments/721078648911954103/912854031293120583/unknown.png).
+  * Start at a memory clock of 500 MHz and increase in increments of 50-100 MHz. Note that memory clocks will usually scale much higher than core clocks (even over 1000 MHz).
   * To test the stability of the memory clock, you will need to look for performance regressions and artifacts. If you see any regression or lowering in score or any visual [artifacts](https://cdn.discordapp.com/attachments/721078648911954103/912854281768562708/IysjurtuAhMsoW2Z0iHIPusanO2CxdTIbLpRYcezRcTPzONeW3ImUcHcBiWJDvY-vKYsHaB5OTXQdJjvmjvWSHG2BOBRvz2Pp84K1DwTqQA.png), decrease the memory clock by 50-100 MHz and retest. The recommended benchmark for finding performance regressions (GDDR6X) is [Unigine Superposition](https://benchmark.unigine.com/superposition) as the scores are consistent.
   ![image](https://user-images.githubusercontent.com/69487009/155003914-986b3fbb-6f76-4f8a-b4c5-0d5351b7d2f6.png)
   * Test the overclock, see if it is stable in both benchmarks and games, and monitor the temperatures using HWiNFO and stay under 80°C on the core and 95°C for hotspot.
   * If stable, increase memory clock by 50-100 MHz and if unstable, decrease memory clock in increments of 50-100 MHz and retest. Continue repeating this process until you have found your maximum stable overclock.
  ## Undervolting
   * Click CTRL F to open the curve editor and [this](https://www.youtube.com/watch?v=LPpW9yXHvOU) guide and start at a baseline of 900 mV.
+  * Your curve should look like this to start:
+  ![image](https://user-images.githubusercontent.com/69487009/155066545-28a62479-95ce-4124-9996-37953615ae41.png)
+
   * Select all the points past the voltage you want (900 mV) by holding down shift and left click and highlighting.
-  * Drag all the points down by selecting a point and dragging it down.
+  * Drag all the points down by selecting a point and dragging it down. Make sure the highest point on the part you are dragging down is lower than the highest point to the left of it.
+  * Your curve should now look like this:
+  ![image](https://user-images.githubusercontent.com/69487009/155066307-383e1f36-4e7a-4974-9cc7-a6bf9fe1fca6.png)
+  
   * Click apply ![image](https://user-images.githubusercontent.com/69487009/155014083-1b40ab17-e804-42fc-b524-94d7eba65dc1.png) to apply the undervolt and voltage curve you set.
+  * Your curve should look like this:
+  ![image](https://user-images.githubusercontent.com/69487009/155066400-0bce9ab3-da3a-431e-98e5-3ba9b88271d4.png)
+
   * Run a variety of workloads and games and check HWiNFO for power throttling in HWiNFO under GPU Performance Limiters.
   ![image](https://user-images.githubusercontent.com/69487009/155013749-0e22d23b-4d01-4e3a-b253-374171d38ae2.png)
   * If you are power throttling in-game, lower voltage by 25 mV, and retest. Once you are satisfied with temperatures and are not power throttling, you have found the optimum voltage.
+  * Lowering voltage by 25 mV means that you will be at 875 mV from 900 mV and your curve should look like this:
+  ![image](https://user-images.githubusercontent.com/69487009/155066793-85249e79-b72a-492c-96a3-48d5e5fe5c21.png)
 
 # Flashing a VBIOS
  This section is for people who have already tested their overclocks but still want that additional headroom. Flashing a VBIOS can be very helpful as it can increase power limits which can increase overclocking headroom. It can also be risky and can void the warranty.
@@ -139,8 +151,17 @@ them to a profile. ![image](https://user-images.githubusercontent.com/69487009/1
  * The most important thing about overclocking is experimentation, try different things like increasing voltage to get higher clocks or lower voltage to get lower temps and more consistent clocks.
  * Temps are important. GPUs should stay as cool as possible for longevity, audibility, and performance:
    * For starters, taking off your side panel can improve thermals in airflow limited scenarios; if they do, a case with more airflow will help thermals considerably.
-   * Repasting your GPU with a high-quality paste such as NT-H2, KPX, and GELID GC Extreme. It’ll last a long time and has an incredible impact on temperatures.
+   * Repasting your GPU with a high-quality paste such as NT-H2, KPX, GELID GC Extreme, or MX-4/5 (budget). It’ll last a long time and has an incredible impact on temperatures.
    * Deshrouding and adding fans such as Phanteks T30s, Noctua NF-A12x25s, or ARCTIC P12s (budget) are also a good way to improve temps as stock fans tend to not be that great.
    * A more aggressive fan curve on your CPU, GPU, or case can help with airflow and thermals. Go as high as your audibly tolerable.
-   * Removing dust filters can help with airflow due to the misalignment of holes. 
+   * Removing dust filters can help with airflow due to the misalignment of holes.
+ * Definitions of performance limits listed in HWiNFO:
+ 
+  | Performance limit | Abbreviation | Definition |
+  | :------------------ | :-: | :-- |
+  | Performance limit - Power | Pwr | GPU has hit the power limit defined by its VBIOS and throttled | 
+  | Performance limit - Thermal | Thrm | GPU has hit the thermal limit and throttled |
+  | Performance limit - Reliability Voltage | vRel | Too much voltage for current temps |
+  | Performance limit - Max Operating Voltage | VOp | GPU has hit the voltage limit defined by its VBIOS |
+  | Performance limit - Utilization | Util | GPU is not under full load |
 
