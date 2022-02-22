@@ -30,17 +30,17 @@
    * [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards): This software is the most widely used and robust. Other software may be lacking in certain features and are generally not recommended.
   ## Monitoring Software
    * [HWiNFO](https://www.hwinfo.com/download/): HWiNFO is the most frequently used monitor software as it presents the values of all the sensors available and is a good software to have when overclocking your CPU, RAM, and GPU.
-   * [GPU-Z](https://www.techpowerup.com/download/techpowerup-gpu-z/): GPU-Z is a software that will report the model, vbios, and version of your GPU.
+   * [GPU-Z](https://www.techpowerup.com/download/techpowerup-gpu-z/): GPU-Z is a software that will report the model, VBIOS, and version of your GPU.
    * [OCCT](https://www.ocbase.com/download): OCCT is a piece of software that stress tests while providing sensor values from HWiNFO. This can be used instead of HWiNFO while running an OCCT test.
   ## Benchmarks
   ### Recommended
    * One of the best stress tests is just playing games. There is currently no conclusive stress test for GPUs other than OCCT and playing games is a great way to find instability.
-   * [Superposition](https://benchmark.unigine.com/superposition): This is a benchmark that will stress your GPU and VRAM well and is good at finding instability. It is used for getting reliable scores to see performance regressions. Make sure to set the [preset](https://cdn.discordapp.com/attachments/721078648911954103/916013522993942528/unknown.png) so it [maxes out the VRAM](https://cdn.discordapp.com/attachments/873056719822008381/873375349814206484/unknown.png) *[without going over](https://cdn.discordapp.com/attachments/873056719822008381/873380510393565224/unknown.png)*.
+   * [Superposition](https://benchmark.unigine.com/superposition): This is a benchmark that will stress your GPU and VRAM well and is good at finding instability. It is used for getting reliable scores to see performance regressions. Make sure to set the preset so it maxes out the VRAM *[without going over](https://cdn.discordapp.com/attachments/873056719822008381/873380510393565224/unknown.png)*.
    ![image](https://user-images.githubusercontent.com/69487009/155036041-4eed7d4b-1103-4d88-876c-d5878cbaf70e.png)
    * [3DMark](https://store.steampowered.com/app/223850/3DMark/): This is widely used, to stress your GPU well, and is also good at finding instability. Note that it is not recommended for performance regressions as there is a lot of variance in scores and Superposition is better for getting accurate scores. There is a demo version you can download for free. Run the Time Spy benchmark as it is the most relevant test.
    * [OCCT](https://www.ocbase.com/): This test is the best for finding errors and stressing your GPU, however, it requires careful fine-tuning and takes a while to find the “sweet spot” as it power throttles at stock settings.
    ![image](https://user-images.githubusercontent.com/69487009/155036223-fe2aebc0-f60e-433f-81e6-325db9e3cfa8.png)
-     * V10: Go to the [3D tab](https://cdn.discordapp.com/attachments/721078648911954103/916023019313438730/unknown.png) under [test](https://cdn.discordapp.com/attachments/721078648911954103/916023115128135721/unknown.png). Turn on [error detection](https://cdn.discordapp.com/attachments/721078648911954103/916023308510715914/unknown.png) and [shader complexity to 8](https://cdn.discordapp.com/attachments/721078648911954103/916023534663385168/unknown.png). Decrease [GPU usage limit (%)](https://cdn.discordapp.com/attachments/721078648911954103/916025031673393182/unknown.png) until you just barely (5% of the time) power throttle. Click start and leave it running for an hour.
+     * V10: Go to the 3D tab under test. Turn on error detection and shader complexity to 8. Decrease GPU usage limit (%) until you just barely (5% of the time) power throttle.  Click start and leave it running for an hour.
      * V11: [Coming soon](https://www.youtube.com/watch?v=QvHyalfsJdY).
   ### Avoid
    * Furmark: Draws a lot of power and doesn't effectively test as power limiting will be prevalent and temperatures will be elevated.
@@ -63,10 +63,18 @@
 
 # Overclocking
  ## Setup
-  1. Download [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) and set a [fan curve](https://media.discordapp.net/attachments/873056719822008381/873068974546509855/fanc.png). Settings -> Fan -> Enable User Defined Control.
+  1. Download [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) and set a fan curve. Settings -> Fan -> Enable User Defined Control.
+  ![image](https://user-images.githubusercontent.com/69487009/155074841-203d5993-73db-49fe-bb48-8289d175a0ef.png)
+
   2. While still in settings, go to User Interface -> User interface skinning properties and select a skin such as the MSI Cyborg Afterburner skin as it will be easier to follow.
-  3. Download [HWiNFO](https://www.hwinfo.com/download/) and run it in [sensors only](https://cdn.discordapp.com/attachments/721078648911954103/945177008671952906/unknown.png).
-  4. Go to MSI Afterburner, [max out power and temp limits](https://cdn.discordapp.com/attachments/873056719822008381/873365104442351626/unknown.png), and put the priority on the power limit. Note that laptops and some GPUs will not be able to go over 100%. This can be fixed by shunting or by [flashing a higher power limit VBIOS](#flashing-a-vbios).
+  3. Download [HWiNFO](https://www.hwinfo.com/download/) and run it in sensors only.
+  
+  ![image](https://user-images.githubusercontent.com/69487009/155072633-1e3f814e-3350-4043-8640-b36f842d52c6.png)
+  
+  4. Go to MSI Afterburner, max out power and temp limits and put the priority on the power limit. Note that laptops and some GPUs will not be able to go over 100%. This can be fixed by shunting or by [flashing a higher power limit VBIOS](#flashing-a-vbios).
+  
+  ![image](https://user-images.githubusercontent.com/69487009/155073843-d60e666a-f3b8-4422-91a8-e331f663270b.png)
+
  ## Finding a Core Clock
   * Open Afterburner and put the core clock to 75 as a baseline.
   * Apply the settings ![image](https://user-images.githubusercontent.com/69487009/155014073-4aac5d7b-91d6-4b96-abd1-ab51287cb248.png) and save ![image](https://user-images.githubusercontent.com/69487009/155004968-6f7ee82e-1575-4605-9932-644e5d702d45.png)
@@ -75,9 +83,12 @@ them to a profile. ![image](https://user-images.githubusercontent.com/69487009/1
   * Test the overclock, see if it is stable in both benchmarks and games, and monitor the temperatures using HWiNFO and stay under 80°C on the core and 95°C for hotspot.
   * If stable, increase core clock speeds in increments of +15 MHz/12.5 MHz using the slider or by typing in a value. If the benchmarks or games crash, decrease clock speeds by the same amount and retest until you have reached stability. You will be limited by temperatures (always), and your card's power limit. There is no "limit" on how far you can overclock, however, you will know you reached the limit once you experience errors or crashes in stress tests and games. Keep in mind that an overclock can be stable in one game but not another.
   ## Finding a Memory Clock
-  * After you have tested the core overclock sufficiently and confirmed its stability, you can start increasing the [memory clock](https://cdn.discordapp.com/attachments/721078648911954103/912854031293120583/unknown.png).
+  * After you have tested the core overclock sufficiently and confirmed its stability, you can start increasing the memory clock.
+  
+  ![image](https://user-images.githubusercontent.com/69487009/155074055-b1c4fab6-7f5f-4cc5-9bb6-f10a564705b5.png)
+
   * Start at a memory clock of 500 MHz and increase in increments of 50-100 MHz. Note that memory clocks will usually scale much higher than core clocks (even over 1000 MHz).
-  * To test the stability of the memory clock, you will need to look for performance regressions and artifacts. If you see any regression or lowering in score or any visual [artifacts](https://cdn.discordapp.com/attachments/721078648911954103/912854281768562708/IysjurtuAhMsoW2Z0iHIPusanO2CxdTIbLpRYcezRcTPzONeW3ImUcHcBiWJDvY-vKYsHaB5OTXQdJjvmjvWSHG2BOBRvz2Pp84K1DwTqQA.png), decrease the memory clock by 50-100 MHz and retest. The recommended benchmark for finding performance regressions (GDDR6X) is [Unigine Superposition](https://benchmark.unigine.com/superposition) as the scores are consistent.
+  * To test the stability of the memory clock, you will need to look for performance regressions and artifacts. If you see any regression or lowering in score or any [visual artifacts](https://cdn.discordapp.com/attachments/721078648911954103/912854281768562708/IysjurtuAhMsoW2Z0iHIPusanO2CxdTIbLpRYcezRcTPzONeW3ImUcHcBiWJDvY-vKYsHaB5OTXQdJjvmjvWSHG2BOBRvz2Pp84K1DwTqQA.png), decrease the memory clock by 50-100 MHz and retest. The recommended benchmark for finding performance regressions (GDDR6X) is [Unigine Superposition](https://benchmark.unigine.com/superposition) as the scores are consistent.
   ![image](https://user-images.githubusercontent.com/69487009/155003914-986b3fbb-6f76-4f8a-b4c5-0d5351b7d2f6.png)
   * Test the overclock, see if it is stable in both benchmarks and games, and monitor the temperatures using HWiNFO and stay under 80°C on the core and 95°C for hotspot.
   * If stable, increase memory clock by 50-100 MHz and if unstable, decrease memory clock in increments of 50-100 MHz and retest. Continue repeating this process until you have found your maximum stable overclock.
@@ -89,7 +100,7 @@ them to a profile. ![image](https://user-images.githubusercontent.com/69487009/1
   * Select all the points past the voltage you want (900 mV) by holding down shift and left click and highlighting.
   * Drag all the points down by selecting a point and dragging it down. Make sure the highest point on the part you are dragging down is lower than the highest point to the left of it.
   * Your curve should now look like this:
-  ![image](https://user-images.githubusercontent.com/69487009/155066307-383e1f36-4e7a-4974-9cc7-a6bf9fe1fca6.png)
+  ![image](https://user-images.githubusercontent.com/69487009/155075101-33097614-e25c-4678-aa7f-342abfaaedff.png)
   
   * Click apply ![image](https://user-images.githubusercontent.com/69487009/155014083-1b40ab17-e804-42fc-b524-94d7eba65dc1.png) to apply the undervolt and voltage curve you set.
   * Your curve should look like this:
@@ -109,7 +120,10 @@ them to a profile. ![image](https://user-images.githubusercontent.com/69487009/1
   * When you flash a VBIOS, the V/F curve and fan curve will be different so your current overclock may not be stable or lower than usual and the fan speeds may be different.
   * If your power goes out while flashing, there is a chance of bricking your card just like a motherboard BIOS flash.
  ## How to Flash a VBIOS
-  * Download [GPU-Z](https://www.techpowerup.com/gpuz/) and go to [Advanced](https://cdn.discordapp.com/attachments/721078648911954103/932752065657200700/unknown.png) -> [NVIDIA BIOS](https://cdn.discordapp.com/attachments/721078648911954103/932752453735174214/unknown.png) -> 	[Power Limit](https://cdn.discordapp.com/attachments/721078648911954103/932752933966200872/unknown.png) -> [Maximum](https://cdn.discordapp.com/attachments/721078648911954103/932753077902131220/unknown.png).
+  * Download [GPU-Z](https://www.techpowerup.com/gpuz/) and go to Advanced -> NVIDIA BIOS -> Power Limit -> Maximum.
+  
+  ![image](https://user-images.githubusercontent.com/69487009/155074239-f430056b-6141-4d60-8ff5-03e7350875b7.png)
+
   * After you have followed the steps above, go [here](https://www.techpowerup.com/vgabios/) and locate a suitable VBIOS with a higher power limit for your card.
   ![image](https://user-images.githubusercontent.com/69487009/155030699-7616020e-ac97-4ae0-9b26-9bd0ff8a379c.png)
   * There may be some XOC VBIOSes with a 1000w power limit but these are highly discouraged unless you know exactly what you are doing and have sufficient cooling/power.
