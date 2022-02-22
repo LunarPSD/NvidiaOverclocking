@@ -23,7 +23,7 @@
 6. [Miscellaneous](#miscellaneous)
    1. [Fixing a boot loop](fixing-a-boot-loop)
    2. [NVCleanstall/DDU](#nvcleanstallddu)
-7. [Tips and Tricks](tips-and-tricks)
+7. [Tips and Tricks](#tips-and-tricks)
    
 # Prerequisites and Stability Tests
   ## Overclocking Software
@@ -58,7 +58,7 @@
   * Overclocking is dangerous: Modern Nvidia GPUs are locked in terms of how far you can push the voltage unless you have a modded VBIOS or have a physical modification to your card. The voltage that your card will use is safe and increasing clock speeds will not increase the voltage to unsafe values.
   * Overclocking too much is bad: There is no such thing as overclocking a modern GPU with a hard voltage lock and a normal VBIOS too much. The only time where an overclock is “bad” is when it’s unstable and that is fixed by stability testing.
   * Undervolting will lower performance: Undervolting may not be optimal for every card. However, it will improve performance when power limited, and reduce temperatures otherwise (12.5 - 15 MHz increase for every 5°C cooler).
-  * Core voltage adds more voltage: The core voltage slider will generally not do much but it increases the aggressiveness of the V/F curve and makes your GPU use the higher voltage points more but does not add more voltage.
+  * Core voltage adds more voltage: The core voltage slider will generally not do much but it increases the aggressiveness of the V/F curve and makes your GPU use the higher voltage points within the threshold of safe voltages of the card, but does not add more voltage.
   * Dragging the point at the correct voltage to your desired clock speed is a common way to undervolt. This is an [unoptimal way](https://www.youtube.com/watch?v=RH3FZXvBkiE) because of the [effective clock speed](https://cdn.discordapp.com/attachments/714879622181028032/874460000565739550/unknown.png) being lower than the [clock speed displayed](https://cdn.discordapp.com/attachments/714879622181028032/945465118664323092/unknown.png) when using this method. Instead, use the slider in Afterburner to change clock speeds.
 
 # Overclocking
@@ -66,7 +66,7 @@
   1. Download [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) and set a [fan curve](https://media.discordapp.net/attachments/873056719822008381/873068974546509855/fanc.png). Settings -> Fan -> Enable User Defined Control.
   2. While still in settings, go to User Interface -> User interface skinning properties and select a skin such as the MSI Cyborg Afterburner skin as it will be easier to follow.
   3. Download [HWiNFO](https://www.hwinfo.com/download/) and run it in [sensors only](https://cdn.discordapp.com/attachments/721078648911954103/945177008671952906/unknown.png).
-  4. Go to MSI Afterburner, [max out power and temp limits](https://cdn.discordapp.com/attachments/873056719822008381/873365104442351626/unknown.png), and put the priority on the power limit. Note that laptops and some GPUs will not be able to go over 100%. This can be fixed by shunting or a different VBIOS
+  4. Go to MSI Afterburner, [max out power and temp limits](https://cdn.discordapp.com/attachments/873056719822008381/873365104442351626/unknown.png), and put the priority on the power limit. Note that laptops and some GPUs will not be able to go over 100%. This can be fixed by shunting or by [flashing a higher power limit VBIOS](#flashing-a-vbios).
  ## Finding a Core Clock
   * Open Afterburner and raise the core clock speed using the slider in increments of 15 MHz for Turing/Ampere (30/20/16 series) or 12.5 MHz for Pascal (10 series). You will be limited by temperatures (always), and your card's power limit. There is no "limit" on how far you can overclock, however, you will know you reached the limit once you experience errors or crashes in stress tests and games. Keep in mind that an overclock can be stable in one game but not another. 
   * Apply the settings ![image](https://user-images.githubusercontent.com/69487009/155014073-4aac5d7b-91d6-4b96-abd1-ab51287cb248.png) and save ![image](https://user-images.githubusercontent.com/69487009/155004968-6f7ee82e-1575-4605-9932-644e5d702d45.png)
