@@ -1,6 +1,6 @@
 # Table of Contents
  
-1. [Prerequisites](#prerequisites-and-stability-tests)
+1. [Prerequisites and Stability Tests](#prerequisites-and-stability-tests)
    1. [Overclocking Software](#overclocking-software)
    2. [Monitoring Software](#monitoring-software)
    3. [Benchmarks](#benchmarks)
