@@ -30,7 +30,7 @@
    * [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards): This software is the most widely used and robust. Other software may be lacking in certain features and are generally not recommended.
   ## Monitoring Software
    * [HWiNFO](https://www.hwinfo.com/download/): HWiNFO is the most frequently used monitor software as it presents the values of all the sensors available and is a good software to have when overclocking your CPU, RAM, and GPU.
-   * [GPU-Z](https://www.techpowerup.com/download/techpowerup-gpu-z/): GPU-Z is a software that will report the model, VBIOS, and version of your GPU.
+   * [GPU-Z](https://www.techpowerup.com/download/techpowerup-gpu-z/): GPU-Z is a software that will report the model, VBIOS, and the hardware specifics of your GPU.
    * [OCCT](https://www.ocbase.com/download): OCCT is a piece of software that stress tests while providing sensor values from HWiNFO. This can be used instead of HWiNFO while running an OCCT test.
   ## Benchmarks
   ### Recommended
@@ -53,7 +53,7 @@
  ## Benefits of Overclocking and Undervolting
   * Overclocking can provide those extra frames or decrease the processing time in workloads and provide you with a slightly better experience. Undervolting will reduce temperatures and voltages and will provide you with a quiet and stable experience.
  ## Overclocking vs. Undervolting
-  * Overclocking typically increases temperatures to gain performance. Undervolting will decrease temperatures and voltage to give consistent performance. While with overclocking, you may achieve a higher clock speed than undervolting, that clock speed may not be sustained under stress. They both have their place and you should choose the one that better fits your needs.
+  * Overclocking typically increases temperatures to gain performance. Undervolting will decrease temperatures and voltage to give consistent performance. While with overclocking, you may achieve a higher clock speed than undervolting, that clock speed may not be sustained under stress. They both have their place and you should choose the one that better fits your needs. For Ampere specifically, undervolting is heavily recommended as they power throttle very often unless they are modded in some way or have a high power limit.
  ## Misconceptions
   * Overclocking is dangerous: Modern Nvidia GPUs are locked in terms of how far you can push the voltage unless you have a modded VBIOS or have a physical modification to your card. The voltage that your card will use is safe and increasing clock speeds will not increase the voltage to unsafe values.
   * Overclocking too much is bad: There is no such thing as overclocking a modern GPU with a hard voltage lock and a normal VBIOS too much. The only time where an overclock is “bad” is when it’s unstable and that is fixed by stability testing.
@@ -169,6 +169,7 @@ them to a profile. ![image](https://user-images.githubusercontent.com/69487009/1
    * Deshrouding and adding fans such as Phanteks T30s, Noctua NF-A12x25s, or ARCTIC P12s (budget) are also a good way to improve temps as stock fans tend to not be that great.
    * A more aggressive fan curve on your CPU, GPU, or case can help with airflow and thermals. Go as high as your audibly tolerable.
    * Removing dust filters can help with airflow due to the misalignment of holes.
+   * Some GPU backplates act as an insulator instead of a heat dissapator and replacing/removing it may be beneficial.
  * Definitions of performance limits listed in HWiNFO:
  
   | Performance limit | Abbreviation | Definition |
