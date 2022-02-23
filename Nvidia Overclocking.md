@@ -63,7 +63,8 @@
 
 # Overclocking
  ## Setup
-  1. Download [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) and set a fan curve. Settings -> Fan -> Enable User Defined Control.
+  1. Download [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) and set a fan curve. Settings -> Fan -> Enable User Defined Control. Set a fan curve as high as possible and is still audibly tolerable. Setting a very high fan curve is always preferable for benchmarking, but the same overclock settings may not be stable on a lower fan speed.
+  
   ![image](https://user-images.githubusercontent.com/69487009/155074841-203d5993-73db-49fe-bb48-8289d175a0ef.png)
 
   2. While still in settings, go to User Interface -> User interface skinning properties and select a skin such as the MSI Cyborg Afterburner skin as it will be easier to follow.
