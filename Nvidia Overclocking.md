@@ -10,7 +10,8 @@
    1. [What is overclocking and undervolting?](#what-is-overclocking-and-undervolting)
    2. [Benefits of Overclocking and Undervolting](#benefits-of-overclocking-and-undervolting)
    3. [Overclocking vs. Undervolting](#overclocking-vs-undervolting)
-   4. [Misconceptions](#misconceptions)
+   4. [Definitions of HWiNFO Performance Limits](definitions-of-hwinfo-performance-limits)
+   5. [Misconceptions](#misconceptions)
 4. [Overclocking](#overclocking)
    1. [Setup](#setup)
    2. [Finding a Core Clock](#finding-a-core-clock)
@@ -51,9 +52,17 @@
  ## What is Overclocking and Undervolting?
   * Overclocking is the process of increasing clock speeds and performance for generally higher heat and lower stability. For the GPU that means increasing the speed at which the core runs as well as the speed at which the VRAM runs at which are core clock speeds and memory clock speeds respectively. Undervolting is the process of limiting the amount of voltage supplied to the GPU and will lower wattage, voltage, and temperatures.
  ## Benefits of Overclocking and Undervolting
-  * Overclocking can provide those extra frames or decrease the processing time in workloads and provide you with a slightly better experience. Undervolting will reduce temperatures and voltages and will provide you with a quiet and stable experience.
+  * Overclocking can provide those extra frames or decrease the processing time in workloads and provide you with a slightly better experience. Undervolting will reduce temperatures and voltages and will provide you with a quiet and stable experience. Combining the two is possible and is commonly done.
  ## Overclocking vs. Undervolting
   * Overclocking typically increases temperatures to gain performance. Undervolting will decrease temperatures and voltage to give consistent performance. While with overclocking, you may achieve a higher clock speed than undervolting, that clock speed may not be sustained under stress. They both have their place and you should choose the one that better fits your needs. For Ampere specifically, undervolting is heavily recommended as they power throttle very often unless they are modded in some way or have a high power limit.
+ ## Defnition of HWiNFO Performance Limits
+   | Performance Limit                         | Abbreviation | Definition                                                      |
+   | :---------------------------------------- | :----------: | :-------------------------------------------------------------- |
+   | Performance Limit - Power                 | Pwr          | GPU has hit the power limit defined by its VBIOS and throttled. | 
+   | Performance Limit - Thermal               | Thrm         | GPU has hit the thermal limit and throttled.                    |
+   | Performance Limit - Reliability Voltage   | vRel         | Too much voltage for current temps.                             |
+   | Performance Limit - Max Operating Voltage | VOp          | GPU has hit the voltage limit defined by its VBIOS.             |
+   | Performance Limit - Utilization           | Util         | GPU is not under full load.                                     |
  ## Misconceptions
   * Overclocking is dangerous: Modern Nvidia GPUs are locked in terms of how far you can push the voltage unless you have a modded VBIOS or have a physical modification to your card. The voltage that your card will use is safe and increasing clock speeds will not increase the voltage to unsafe values.
   * Overclocking too much is bad: There is no such thing as overclocking a modern GPU with a hard voltage lock and a normal VBIOS too much. The only time where an overclock is “bad” is when it’s unstable and that is fixed by stability testing.
@@ -172,13 +181,3 @@ them to a profile. ![image](https://user-images.githubusercontent.com/69487009/1
    * Removing dust filters can help with airflow due to the misalignment of holes.
    * Some GPU backplates act as an insulator instead of a heat dissapator and replacing/removing it may be beneficial.
    * A PCI fan bracket mounted with fans blowing directly under the GPU may imporve airflow.
- * Definitions of performance limits listed in HWiNFO:
- 
-  | Performance limit                         | Abbreviation | Definition                                                     |
-  | :---------------------------------------- | :----------: | :------------------------------------------------------------- |
-  | Performance limit - Power                 | Pwr          | GPU has hit the power limit defined by its VBIOS and throttled | 
-  | Performance limit - Thermal               | Thrm         | GPU has hit the thermal limit and throttled                    |
-  | Performance limit - Reliability Voltage   | vRel         | Too much voltage for current temps                             |
-  | Performance limit - Max Operating Voltage | VOp          | GPU has hit the voltage limit defined by its VBIOS             |
-  | Performance limit - Utilization           | Util         | GPU is not under full load                                     |
-
