@@ -65,16 +65,16 @@
  ## Setup
   1. Download [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) and set a fan curve. Settings -> Fan -> Enable User Defined Control. Set a fan curve as high as possible and is still audibly tolerable. Setting a very high fan curve is always preferable for benchmarking, but the same overclock settings may not be stable on a lower fan speed.
   
-  ![image](https://user-images.githubusercontent.com/69487009/155074841-203d5993-73db-49fe-bb48-8289d175a0ef.png)
+     ![image](https://user-images.githubusercontent.com/69487009/155074841-203d5993-73db-49fe-bb48-8289d175a0ef.png)
 
   2. While still in settings, go to User Interface -> User interface skinning properties and select a skin such as the MSI Cyborg Afterburner skin as it will be easier to follow.
   3. Download [HWiNFO](https://www.hwinfo.com/download/) and run it in sensors only.
   
-  ![image](https://user-images.githubusercontent.com/69487009/155072633-1e3f814e-3350-4043-8640-b36f842d52c6.png)
+     ![image](https://user-images.githubusercontent.com/69487009/155072633-1e3f814e-3350-4043-8640-b36f842d52c6.png)
   
   4. Go to MSI Afterburner, max out power and temp limits and put the priority on the power limit. Note that laptops and some GPUs will not be able to go over 100%. This can be fixed by shunting or by [flashing a higher power limit VBIOS](#flashing-a-vbios).
   
-  ![image](https://user-images.githubusercontent.com/69487009/155073843-d60e666a-f3b8-4422-91a8-e331f663270b.png)
+     ![image](https://user-images.githubusercontent.com/69487009/155073843-d60e666a-f3b8-4422-91a8-e331f663270b.png)
 
  ## Finding a Core Clock
   * Open Afterburner and put the core clock to 75 as a baseline.
@@ -86,7 +86,7 @@ them to a profile. ![image](https://user-images.githubusercontent.com/69487009/1
   ## Finding a Memory Clock
   * After you have tested the core overclock sufficiently and confirmed its stability, you can start increasing the memory clock.
   
-  ![image](https://user-images.githubusercontent.com/69487009/155074055-b1c4fab6-7f5f-4cc5-9bb6-f10a564705b5.png)
+    ![image](https://user-images.githubusercontent.com/69487009/155074055-b1c4fab6-7f5f-4cc5-9bb6-f10a564705b5.png)
 
   * Start at a memory clock of 500 MHz and increase in increments of 50-100 MHz. Note that memory clocks will usually scale much higher than core clocks (even over 1000 MHz).
   * To test the stability of the memory clock, you will need to look for performance regressions and artifacts. If you see any regression or lowering in score or any [visual artifacts](https://cdn.discordapp.com/attachments/721078648911954103/912854281768562708/IysjurtuAhMsoW2Z0iHIPusanO2CxdTIbLpRYcezRcTPzONeW3ImUcHcBiWJDvY-vKYsHaB5OTXQdJjvmjvWSHG2BOBRvz2Pp84K1DwTqQA.png), decrease the memory clock by 50-100 MHz and retest. The recommended benchmark for finding performance regressions (GDDR6X) is [Unigine Superposition](https://benchmark.unigine.com/superposition) as the scores are consistent.
@@ -123,7 +123,7 @@ them to a profile. ![image](https://user-images.githubusercontent.com/69487009/1
  ## How to Flash a VBIOS
   * Download [GPU-Z](https://www.techpowerup.com/gpuz/) and go to Advanced -> NVIDIA BIOS -> Power Limit -> Maximum.
   
-  ![image](https://user-images.githubusercontent.com/69487009/155074239-f430056b-6141-4d60-8ff5-03e7350875b7.png)
+    ![image](https://user-images.githubusercontent.com/69487009/155074239-f430056b-6141-4d60-8ff5-03e7350875b7.png)
 
   * After you have followed the steps above, go [here](https://www.techpowerup.com/vgabios/) and locate a suitable VBIOS with a higher power limit for your card.
   ![image](https://user-images.githubusercontent.com/69487009/155030699-7616020e-ac97-4ae0-9b26-9bd0ff8a379c.png)
@@ -131,7 +131,7 @@ them to a profile. ![image](https://user-images.githubusercontent.com/69487009/1
   * Once you have found a VBIOS, download it as well as [NVFlash](https://www.techpowerup.com/download/nvidia-nvflash/).
   * Create a new folder in your home directory with any name and put the ROM and the contents of the extracted NVFlash folder inside of it. The folder should look like this. 
    
-  ![image](https://user-images.githubusercontent.com/69487009/155030951-b4ed2a12-f5e5-4e15-a655-73116b429701.png)
+    ![image](https://user-images.githubusercontent.com/69487009/155030951-b4ed2a12-f5e5-4e15-a655-73116b429701.png)
   * Shift right-click inside the folder and select Open in Windows Terminal/Powershell.
   * Once the window is open, type `./nvflash64.exe --save example.rom`
     * Two dashes before save
@@ -147,7 +147,7 @@ them to a profile. ![image](https://user-images.githubusercontent.com/69487009/1
   * Hold down shift and click restart.
   * At the choose an option screen, go to Troubleshoot > Advanced options > Startup Settings > Restart. Finally, type `4` to boot into safe mode.
   
-  ![image](https://user-images.githubusercontent.com/69487009/155035875-c7a04198-6f72-45a8-8c81-af7b1bac496e.png)
+    ![image](https://user-images.githubusercontent.com/69487009/155035875-c7a04198-6f72-45a8-8c81-af7b1bac496e.png)
   * Go into MSI Afterburner and uncheck this to have your overclock not applied at startup. If you have this checked, uncheck it as well.
   ![image](https://user-images.githubusercontent.com/69487009/155035951-3d926aaf-ffb4-44db-9910-844f8b7ad50d.png)
   ## NVCleanstall/DDU
@@ -171,6 +171,7 @@ them to a profile. ![image](https://user-images.githubusercontent.com/69487009/1
    * A more aggressive fan curve on your CPU, GPU, or case can help with airflow and thermals. Go as high as your audibly tolerable.
    * Removing dust filters can help with airflow due to the misalignment of holes.
    * Some GPU backplates act as an insulator instead of a heat dissapator and replacing/removing it may be beneficial.
+   * A PCI fan bracket mounted with fans blowing directly under the GPU may imporve airflow.
  * Definitions of performance limits listed in HWiNFO:
  
   | Performance limit                         | Abbreviation | Definition                                                     |
