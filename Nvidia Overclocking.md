@@ -39,6 +39,9 @@
    * [Superposition](https://benchmark.unigine.com/superposition): This is a benchmark that will stress your GPU and VRAM well and is good at finding instability. It is used for getting reliable scores to see performance regressions. Make sure to set the preset so it maxes out the VRAM *[without going over](https://cdn.discordapp.com/attachments/873056719822008381/873380510393565224/unknown.png)*.
    ![image](https://user-images.githubusercontent.com/69487009/155036041-4eed7d4b-1103-4d88-876c-d5878cbaf70e.png)
    * [3DMark](https://store.steampowered.com/app/223850/3DMark/): This is widely used, to stress your GPU well, and is also good at finding instability. Note that it is not recommended for performance regressions as there is a lot of variance in scores and Superposition is better for getting accurate scores. There is a demo version you can download for free. Run the Time Spy benchmark as it is the most relevant test.
+   
+     ![image](https://user-images.githubusercontent.com/69487009/156465473-db75ddc7-13ed-45aa-bce9-6154aeb50d88.png)
+
    * [OCCT](https://www.ocbase.com/): This test is the best for finding errors and stressing your GPU, however, it requires careful fine-tuning and takes a while to find the “sweet spot” as it power throttles at stock settings. Make sure you do not turn off your monitor as some graphics drivers crash because of this.
    ![image](https://user-images.githubusercontent.com/69487009/155036223-fe2aebc0-f60e-433f-81e6-325db9e3cfa8.png)
      * V10: Go to the 3D tab under test. Turn on error detection and shader complexity to 8. Decrease GPU usage limit (%) until you just barely (5% of the time) power throttle.  Click start and leave it running for an hour.
@@ -88,7 +91,7 @@
  ## Finding a Core Clock
   * Open Afterburner and put the core clock to 75 as a baseline.
   
-  ![image](https://user-images.githubusercontent.com/69487009/155863420-bc3c3d17-07b9-4992-b3d6-1550352a7bbd.png)
+     ![image](https://user-images.githubusercontent.com/69487009/155863420-bc3c3d17-07b9-4992-b3d6-1550352a7bbd.png)
 
   * Apply the settings ![image](https://user-images.githubusercontent.com/69487009/155014073-4aac5d7b-91d6-4b96-abd1-ab51287cb248.png) and save ![image](https://user-images.githubusercontent.com/69487009/155004968-6f7ee82e-1575-4605-9932-644e5d702d45.png)
 them to a profile. ![image](https://user-images.githubusercontent.com/69487009/155006086-5e300602-f099-4c6e-a3bf-29962b2905d2.png)
