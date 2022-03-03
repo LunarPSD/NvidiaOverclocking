@@ -139,7 +139,7 @@
  
      ![image](https://user-images.githubusercontent.com/69487009/155066400-0bce9ab3-da3a-431e-98e5-3ba9b88271d4.png)
 
-  * Run a variety of workloads and games and check HWiNFO for power throttling in HWiNFO under GPU Performance Limiters.
+  * Run a variety of workloads and games and check HWiNFO for power throttling in sensors only under GPU Performance Limiters.
  
      ![image](https://user-images.githubusercontent.com/69487009/155013749-0e22d23b-4d01-4e3a-b253-374171d38ae2.png)
      
