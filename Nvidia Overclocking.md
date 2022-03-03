@@ -36,20 +36,25 @@
   ## Benchmarks
   ### Recommended
    * One of the best stress tests is just playing games. There is currently no conclusive stress test for GPUs other than OCCT and playing games is a great way to find instability.
-   * [Superposition](https://benchmark.unigine.com/superposition): This is a benchmark that will stress your GPU and VRAM well and is good at finding instability. It is used for getting reliable scores to see performance regressions. Make sure to set the preset so it maxes out the VRAM *[without going over](https://cdn.discordapp.com/attachments/873056719822008381/873380510393565224/unknown.png)*.
-   ![image](https://user-images.githubusercontent.com/69487009/155036041-4eed7d4b-1103-4d88-876c-d5878cbaf70e.png)
+   * [Superposition](https://benchmark.unigine.com/superposition): This is a benchmark that will stress your GPU and VRAM well and is good at finding instability. It is used for getting reliable scores to see performance regressions. Make sure to set the preset so it maxes out the VRAM *without going over.* <img align="center" src="https://cdn.discordapp.com/attachments/873056719822008381/873380510393565224/unknown.png">
+   
+     ![image](https://user-images.githubusercontent.com/69487009/155036041-4eed7d4b-1103-4d88-876c-d5878cbaf70e.png)
+   
    * [3DMark](https://store.steampowered.com/app/223850/3DMark/): This is widely used, to stress your GPU well, and is also good at finding instability. Note that it is not recommended for performance regressions as there is a lot of variance in scores and Superposition is better for getting accurate scores. There is a demo version you can download for free. Run the Time Spy benchmark as it is the most relevant test.
    
      ![image](https://user-images.githubusercontent.com/69487009/156465473-db75ddc7-13ed-45aa-bce9-6154aeb50d88.png)
 
    * [OCCT](https://www.ocbase.com/): This test is the best for finding errors and stressing your GPU, however, it requires careful fine-tuning and takes a while to find the “sweet spot” as it power throttles at stock settings. Make sure you do not turn off your monitor as some graphics drivers crash because of this.
-   ![image](https://user-images.githubusercontent.com/69487009/155036223-fe2aebc0-f60e-433f-81e6-325db9e3cfa8.png)
+   
+     ![image](https://user-images.githubusercontent.com/69487009/155036223-fe2aebc0-f60e-433f-81e6-325db9e3cfa8.png)
      * V10: Go to the 3D tab under test. Turn on error detection and shader complexity to 8. Decrease GPU usage limit (%) until you just barely (5% of the time) power throttle.  Click start and leave it running for an hour.
      * V11: [Coming soon](https://www.youtube.com/watch?v=QvHyalfsJdY).
   ### Avoid
    * Furmark: Draws a lot of power and doesn't effectively test as power limiting will be prevalent and temperatures will be elevated.
    * Kombustor: Same issue as Furmark.
-   * Heaven: This is a very old testing program (13 years ago) that doesn’t stress your GPU a lot. However, it can be useful because it can be run in the background and loops for free. This program is not recommended unless you want to run it in the background for extended periods. If you do decide to use this, your settings should look like this. ![image](https://user-images.githubusercontent.com/69487009/155033902-2cc5dc72-f71a-48f2-b3b4-5fe1c069b65d.png)
+   * Heaven: This is a very old testing program (13 years ago) that doesn’t stress your GPU a lot. However, it can be useful because it can be run in the background and loops for free. This program is not recommended unless you want to run it in the background for extended periods. If you do decide to use this, your settings should look like this. 
+   
+     ![image](https://user-images.githubusercontent.com/69487009/155033902-2cc5dc72-f71a-48f2-b3b4-5fe1c069b65d.png)
   
 # Overclocking Info
  ## What is Overclocking and Undervolting?
@@ -71,7 +76,7 @@
   * Overclocking too much is bad: There is no such thing as overclocking a modern GPU with a hard voltage lock and a normal VBIOS too much. The only time where an overclock is “bad” is when it’s unstable and that is fixed by stability testing.
   * Undervolting will lower performance: Undervolting may not be optimal for every card. However, it will improve performance when power limited, and reduce temperatures otherwise (12.5 - 15 MHz increase for every 5°C cooler).
   * Core voltage adds more voltage: The core voltage slider will generally not do much but it increases the aggressiveness of the V/F curve and makes your GPU use the higher voltage points within the threshold of safe voltages of the card, but does not add more voltage.
-  * Dragging the point at the correct voltage to your desired clock speed is a common way to undervolt. This is an [unoptimal way](https://www.youtube.com/watch?v=RH3FZXvBkiE) because of the [effective clock speed](https://cdn.discordapp.com/attachments/714879622181028032/874460000565739550/unknown.png) being lower than the [clock speed displayed](https://cdn.discordapp.com/attachments/714879622181028032/945465118664323092/unknown.png) when using this method. Instead, use the slider in Afterburner to change clock speeds.
+  * Dragging the point at the correct voltage to your desired clock speed is a common way to undervolt. This is an [unoptimal way](https://www.youtube.com/watch?v=RH3FZXvBkiE) because of the effective clock speed <img align="center" src="https://cdn.discordapp.com/attachments/714879622181028032/874460000565739550/unknown.png"> being lower than the clock speed displayed <img align="center" src="https://cdn.discordapp.com/attachments/714879622181028032/945465118664323092/unknown.png"> when using this method. Instead, use the slider in Afterburner to change clock speeds.
 
 # Overclocking
  ## Setup
@@ -84,7 +89,7 @@
   
      ![image](https://user-images.githubusercontent.com/69487009/155072633-1e3f814e-3350-4043-8640-b36f842d52c6.png)
   
-  4. Go to MSI Afterburner, max out power and temp limits and put the priority on the power limit. Note that laptops and some GPUs will not be able to go over 100%. This can be fixed by shunting or by [flashing a higher power limit VBIOS](#flashing-a-vbios).
+  4. Go to MSI Afterburner, max out power and temp limits and put the priority on the power limit. Note that laptops and some GPUs will not be able to go over 100%. Some GPUs can have a higher power limit by shunting or by [flashing a higher power limit VBIOS](#flashing-a-vbios).
   
      ![image](https://user-images.githubusercontent.com/69487009/155073843-d60e666a-f3b8-4422-91a8-e331f663270b.png)
 
@@ -93,40 +98,47 @@
   
      ![image](https://user-images.githubusercontent.com/69487009/155863420-bc3c3d17-07b9-4992-b3d6-1550352a7bbd.png)
 
-  * Apply the settings ![image](https://user-images.githubusercontent.com/69487009/155014073-4aac5d7b-91d6-4b96-abd1-ab51287cb248.png) and save ![image](https://user-images.githubusercontent.com/69487009/155004968-6f7ee82e-1575-4605-9932-644e5d702d45.png)
-them to a profile. ![image](https://user-images.githubusercontent.com/69487009/155006086-5e300602-f099-4c6e-a3bf-29962b2905d2.png)
-  * Click this ![image](https://user-images.githubusercontent.com/69487009/155013987-f6c7f084-c4cb-4804-bc98-1786056959a7.png) to have the overclock applied at startup.
+  * Apply the settings <img align="center" src="https://user-images.githubusercontent.com/69487009/155014073-4aac5d7b-91d6-4b96-abd1-ab51287cb248.png"> and save <img align="center" src="https://user-images.githubusercontent.com/69487009/155004968-6f7ee82e-1575-4605-9932-644e5d702d45.png"> them to a profile. <img align="center" src="https://user-images.githubusercontent.com/69487009/155006086-5e300602-f099-4c6e-a3bf-29962b2905d2.png">
+  * Click this <img align="center" src="https://user-images.githubusercontent.com/69487009/155013987-f6c7f084-c4cb-4804-bc98-1786056959a7.png"> to have the overclock applied at startup.
   * Test the overclock, see if it is stable in both benchmarks and games, and monitor the temperatures using HWiNFO and stay under 80°C on the core and 95°C for hotspot.
   * If stable, increase core clock speeds in increments of +15 MHz/12.5 MHz using the slider or by typing in a value. If the benchmarks or games crash, decrease clock speeds by the same amount and retest until you have reached stability. You will be limited by temperatures (always), and your card's power limit. There is no "limit" on how far you can overclock, however, you will know you reached the limit once you experience errors or crashes in stress tests and games. Keep in mind that an overclock can be stable in one game but not another.
   ## Finding a Memory Clock
   * After you have tested the core overclock sufficiently and confirmed its stability, you can start increasing the memory clock.
   
-    ![image](https://user-images.githubusercontent.com/69487009/155074055-b1c4fab6-7f5f-4cc5-9bb6-f10a564705b5.png)
+     ![image](https://user-images.githubusercontent.com/69487009/155074055-b1c4fab6-7f5f-4cc5-9bb6-f10a564705b5.png)
 
   * Start at a memory clock of 500 MHz and increase in increments of 50-100 MHz. Note that memory clocks will usually scale much higher than core clocks (even over 1000 MHz).
   * To test the stability of the memory clock, you will need to look for performance regressions and artifacts. If you see any regression or lowering in score or any [visual artifacts](https://cdn.discordapp.com/attachments/721078648911954103/912854281768562708/IysjurtuAhMsoW2Z0iHIPusanO2CxdTIbLpRYcezRcTPzONeW3ImUcHcBiWJDvY-vKYsHaB5OTXQdJjvmjvWSHG2BOBRvz2Pp84K1DwTqQA.png), decrease the memory clock by 50-100 MHz and retest. The recommended benchmark for finding performance regressions (GDDR6X) is [Unigine Superposition](https://benchmark.unigine.com/superposition) as the scores are consistent.
-  ![image](https://user-images.githubusercontent.com/69487009/155003914-986b3fbb-6f76-4f8a-b4c5-0d5351b7d2f6.png)
+  
+     ![image](https://user-images.githubusercontent.com/69487009/155003914-986b3fbb-6f76-4f8a-b4c5-0d5351b7d2f6.png)
   * Test the overclock, see if it is stable in both benchmarks and games, and monitor the temperatures using HWiNFO and stay under 80°C on the core and 95°C for hotspot.
   * If stable, increase memory clock by 50-100 MHz and if unstable, decrease memory clock in increments of 50-100 MHz and retest. Continue repeating this process until you have found your maximum stable overclock.
  ## Undervolting
-  * Click CTRL F to open the curve editor and [this](https://www.youtube.com/watch?v=LPpW9yXHvOU) guide and start at a baseline of 900 mV.
+  * Click CTRL F to open the curve editor and [this video guide](https://www.youtube.com/watch?v=LPpW9yXHvOU) and start at a baseline of 900 mV.
   * Your curve should look like this to start:
-  ![image](https://user-images.githubusercontent.com/69487009/155066545-28a62479-95ce-4124-9996-37953615ae41.png)
+ 
+     ![image](https://user-images.githubusercontent.com/69487009/156475780-19ff599b-56da-4d43-ae22-3ac738e9bc05.png)
 
   * Select all the points past the voltage you want (900 mV) by holding down shift and left click and highlighting.
   * Drag all the points down by selecting a point and dragging it down. Make sure the highest point on the part you are dragging down is lower than the highest point to the left of it.
   * Your curve should now look like this:
-  ![image](https://user-images.githubusercontent.com/69487009/155075101-33097614-e25c-4678-aa7f-342abfaaedff.png)
+ 
+     ![image](https://user-images.githubusercontent.com/69487009/155075101-33097614-e25c-4678-aa7f-342abfaaedff.png)
   
-  * Click apply ![image](https://user-images.githubusercontent.com/69487009/155014083-1b40ab17-e804-42fc-b524-94d7eba65dc1.png) to apply the undervolt and voltage curve you set.
+  * Click apply <img align="center" src=https://user-images.githubusercontent.com/69487009/155014083-1b40ab17-e804-42fc-b524-94d7eba65dc1.png> to apply the undervolt and voltage curve you set.
+ 
   * Your curve should look like this:
-  ![image](https://user-images.githubusercontent.com/69487009/155066400-0bce9ab3-da3a-431e-98e5-3ba9b88271d4.png)
+ 
+     ![image](https://user-images.githubusercontent.com/69487009/155066400-0bce9ab3-da3a-431e-98e5-3ba9b88271d4.png)
 
   * Run a variety of workloads and games and check HWiNFO for power throttling in HWiNFO under GPU Performance Limiters.
-  ![image](https://user-images.githubusercontent.com/69487009/155013749-0e22d23b-4d01-4e3a-b253-374171d38ae2.png)
+ 
+     ![image](https://user-images.githubusercontent.com/69487009/155013749-0e22d23b-4d01-4e3a-b253-374171d38ae2.png)
+     
   * If you are power throttling in-game, lower voltage by 25 mV, and retest. Once you are satisfied with temperatures and are not power throttling, you have found the optimum voltage.
   * Lowering voltage by 25 mV means that you will be at 875 mV from 900 mV and your curve should look like this:
-  ![image](https://user-images.githubusercontent.com/69487009/155066793-85249e79-b72a-492c-96a3-48d5e5fe5c21.png)
+ 
+     ![image](https://user-images.githubusercontent.com/69487009/155066793-85249e79-b72a-492c-96a3-48d5e5fe5c21.png)
 
 # Flashing a VBIOS
  This section is for people who have already tested their overclocks but still want that additional headroom. Flashing a VBIOS can be very helpful as it can increase power limits which can increase overclocking headroom. It can also be risky and will void the warranty.
@@ -138,15 +150,17 @@ them to a profile. ![image](https://user-images.githubusercontent.com/69487009/1
  ## How to Flash a VBIOS
   * Download [GPU-Z](https://www.techpowerup.com/gpuz/) and go to Advanced -> NVIDIA BIOS -> Power Limit -> Maximum.
   
-    ![image](https://user-images.githubusercontent.com/69487009/155074239-f430056b-6141-4d60-8ff5-03e7350875b7.png)
+     ![image](https://user-images.githubusercontent.com/69487009/155074239-f430056b-6141-4d60-8ff5-03e7350875b7.png)
 
   * After you have followed the steps above, go [here](https://www.techpowerup.com/vgabios/) and locate a suitable VBIOS with a higher power limit for your card.
-  ![image](https://user-images.githubusercontent.com/69487009/155030699-7616020e-ac97-4ae0-9b26-9bd0ff8a379c.png)
+ 
+     ![image](https://user-images.githubusercontent.com/69487009/155030699-7616020e-ac97-4ae0-9b26-9bd0ff8a379c.png)
   * There may be some XOC VBIOSes with a 1000w power limit but these are highly discouraged unless you know exactly what you are doing and have sufficient cooling/power.
   * Once you have found a VBIOS, download it as well as [NVFlash](https://www.techpowerup.com/download/nvidia-nvflash/).
   * Create a new folder in your home directory with any name and put the ROM and the contents of the extracted NVFlash folder inside of it. The folder should look like this. 
    
-    ![image](https://user-images.githubusercontent.com/69487009/155030951-b4ed2a12-f5e5-4e15-a655-73116b429701.png)
+     ![image](https://user-images.githubusercontent.com/69487009/155030951-b4ed2a12-f5e5-4e15-a655-73116b429701.png)
+    
   * Shift right-click inside the folder and select Open in Windows Terminal/Powershell.
   * Once the window is open, type `./nvflash64.exe --save example.rom`
     * Two dashes before save
@@ -162,9 +176,10 @@ them to a profile. ![image](https://user-images.githubusercontent.com/69487009/1
   * Hold down shift and click restart.
   * At the choose an option screen, go to Troubleshoot > Advanced options > Startup Settings > Restart. Finally, type `4` to boot into safe mode.
   
-    ![image](https://user-images.githubusercontent.com/69487009/155035875-c7a04198-6f72-45a8-8c81-af7b1bac496e.png)
+     ![image](https://user-images.githubusercontent.com/69487009/155035875-c7a04198-6f72-45a8-8c81-af7b1bac496e.png)
   * Go into MSI Afterburner and uncheck this to have your overclock not applied at startup. If you have this checked, uncheck it as well.
-  ![image](https://user-images.githubusercontent.com/69487009/155035951-3d926aaf-ffb4-44db-9910-844f8b7ad50d.png)
+ 
+     ![image](https://user-images.githubusercontent.com/69487009/155035951-3d926aaf-ffb4-44db-9910-844f8b7ad50d.png)
   ## NVCleanstall/DDU
   This is used when you suspect your drivers are causing issues and/or you just want a less bloated driver.
    * Install the [latest drivers](https://www.nvidia.com/Download/index.aspx), [DDU](https://www.guru3d.com/files-details/display-driver-uninstaller-download.html), and [NVCleanstall](https://www.techpowerup.com/download/techpowerup-nvcleanstall/). 
