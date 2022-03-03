@@ -10,7 +10,7 @@
    1. [What is overclocking and undervolting?](#what-is-overclocking-and-undervolting)
    2. [Benefits of Overclocking and Undervolting](#benefits-of-overclocking-and-undervolting)
    3. [Overclocking vs. Undervolting](#overclocking-vs-undervolting)
-   4. [Definitions of HWiNFO Performance Limits](definitions-of-hwinfo-performance-limits)
+   4. [Definitions of HWiNFO Performance Limits](#definitions-of-hwinfo-performance-limits)
    5. [Misconceptions](#misconceptions)
 4. [Overclocking](#overclocking)
    1. [Setup](#setup)
@@ -22,7 +22,7 @@
    2. [How to Flash a VBIOS](#how-to-flash-a-vbios)
    3. [VBIOS Troubleshooting](#vbios-troubleshooting)
 6. [Miscellaneous](#miscellaneous)
-   1. [Fixing a boot loop](fixing-a-boot-loop)
+   1. [Fixing a boot loop](#fixing-a-boot-loop)
    2. [NVCleanstall/DDU](#nvcleanstallddu)
 7. [Tips and Tricks](#tips-and-tricks)
    
