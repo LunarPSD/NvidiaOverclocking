@@ -109,9 +109,16 @@
      ![image](https://user-images.githubusercontent.com/69487009/155074055-b1c4fab6-7f5f-4cc5-9bb6-f10a564705b5.png)
 
   * Start at a memory clock of 500 MHz and increase in increments of 50-100 MHz. Note that memory clocks will usually scale much higher than core clocks (even over 1000 MHz).
-  * To test the stability of the memory clock, you will need to look for performance regressions and artifacts. If you see any regression or lowering in score or any [visual artifacts](https://cdn.discordapp.com/attachments/721078648911954103/912854281768562708/IysjurtuAhMsoW2Z0iHIPusanO2CxdTIbLpRYcezRcTPzONeW3ImUcHcBiWJDvY-vKYsHaB5OTXQdJjvmjvWSHG2BOBRvz2Pp84K1DwTqQA.png), decrease the memory clock by 50-100 MHz and retest. The recommended benchmark for finding performance regressions (GDDR6X) is [Unigine Superposition](https://benchmark.unigine.com/superposition) as the scores are consistent.
+  * To test the stability of the memory clock, you will need to look for performance regressions and artifacts. If you see any regression or lowering in score or any visual artifacts, decrease the memory clock by 50-100 MHz and retest. The recommended benchmark for finding performance regressions (GDDR6X) is [Unigine Superposition](https://benchmark.unigine.com/superposition) as the scores are consistent.
   
      ![image](https://user-images.githubusercontent.com/69487009/155003914-986b3fbb-6f76-4f8a-b4c5-0d5351b7d2f6.png)
+     
+  * Here are some examples of artifacting:
+  
+     ![image](https://user-images.githubusercontent.com/69487009/156505132-831c5bbe-a475-4bc5-9065-e5230612cb8e.png)
+     
+     ![image](https://user-images.githubusercontent.com/69487009/156505872-97d4ee36-6799-4c36-a9b1-d5672827fcba.png)
+
   * Test the overclock, see if it is stable in both benchmarks and games, and monitor the temperatures using HWiNFO and stay under 80°C on the core and 95°C for hotspot.
   * If stable, increase memory clock by 50-100 MHz and if unstable, decrease memory clock in increments of 50-100 MHz and retest. Continue repeating this process until you have found your maximum stable overclock.
  ## Undervolting
