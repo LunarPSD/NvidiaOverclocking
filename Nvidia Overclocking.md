@@ -63,7 +63,7 @@
   * Overclocking can provide those extra frames or decrease the processing time in workloads and provide you with a slightly better experience. Undervolting will reduce temperatures and voltages and will provide you with a quiet and stable experience. Combining the two is possible and is commonly done.
  ## Overclocking vs. Undervolting
   * Overclocking typically increases temperatures to gain performance. Undervolting will decrease temperatures and voltage to give consistent performance. While with overclocking, you may achieve a higher clock speed than undervolting, that clock speed may not be sustained under stress. They both have their place and you should choose the one that better fits your needs. For Ampere specifically, undervolting is heavily recommended as they power throttle very often unless they are modded in some way or have a high power limit.
- ## Defnition of HWiNFO Performance Limits
+ ## Definitions of HWiNFO Performance Limits
    | Performance Limit                         | Abbreviation | Definition                                                      |
    | :---------------------------------------- | :----------: | :-------------------------------------------------------------- |
    | Performance Limit - Power                 | Pwr          | GPU has hit the power limit defined by its VBIOS and throttled. | 
@@ -77,6 +77,7 @@
   * Undervolting will lower performance: Undervolting may not be optimal for every card. However, it will improve performance when power limited, and reduce temperatures otherwise (12.5 - 15 MHz increase for every 5°C cooler).
   * Core voltage adds more voltage: The core voltage slider will generally not do much but it increases the aggressiveness of the V/F curve and makes your GPU use the higher voltage points within the threshold of safe voltages of the card, but does not add more voltage.
   * Dragging the point at the correct voltage to your desired clock speed is a common way to undervolt. This is an [unoptimal way](https://www.youtube.com/watch?v=RH3FZXvBkiE) because of the effective clock speed <img align="center" src="https://cdn.discordapp.com/attachments/714879622181028032/874460000565739550/unknown.png"> being lower than the clock speed displayed <img align="center" src="https://cdn.discordapp.com/attachments/714879622181028032/945465118664323092/unknown.png"> when using this method. Instead, use the slider in Afterburner to change clock speeds.
+  * The best or maximum overclock for a certain car: There is no such thing as a best or maximum overclock, every physical chip is different and will overclock differently. This is why copying settings is not advisable as there may be more headroom to overclock, or it may be unstable.
 
 # Overclocking
  ## Setup
@@ -89,7 +90,7 @@
   
      ![image](https://user-images.githubusercontent.com/69487009/155072633-1e3f814e-3350-4043-8640-b36f842d52c6.png)
   
-  4. Go to MSI Afterburner, max out power and temp limits and put the priority on the power limit. Note that laptops and some GPUs will not be able to go over 100%. Some GPUs can have a higher power limit by shunting or by [flashing a higher power limit VBIOS](#flashing-a-vbios).
+  4. Go to MSI Afterburner, max out power and temp limits, and put the priority on the power limit. Note that laptops and some GPUs will not be able to go over 100%. Some GPUs can have a higher power limit by shunting or by [flashing a higher power limit VBIOS](#flashing-a-vbios).
   
      ![image](https://user-images.githubusercontent.com/69487009/155073843-d60e666a-f3b8-4422-91a8-e331f663270b.png)
 
@@ -200,5 +201,5 @@
    * Deshrouding and adding fans such as Phanteks T30s, Noctua NF-A12x25s, or ARCTIC P12s (budget) are also a good way to improve temps as stock fans tend to not be that great.
    * A more aggressive fan curve on your CPU, GPU, or case can help with airflow and thermals. Go as high as your audibly tolerable.
    * Removing dust filters can help with airflow due to the misalignment of holes.
-   * Some GPU backplates act as an insulator instead of a heat dissapator and replacing/removing it may be beneficial.
-   * A PCI fan bracket mounted with fans blowing directly under the GPU may imporve airflow.
+   * Some GPU backplates act as an insulator instead of a heat dissipator and replacing/removing it may be beneficial.
+   * A PCI fan bracket mounted with fans blowing directly under the GPU may improve airflow.
