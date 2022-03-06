@@ -64,13 +64,15 @@
  ## Overclocking vs. Undervolting
   * Overclocking typically increases temperatures to gain performance. Undervolting will decrease temperatures and voltage to give consistent performance. While with overclocking, you may achieve a higher clock speed than undervolting, that clock speed may not be sustained under stress. They both have their place and you should choose the one that better fits your needs. For Ampere specifically, undervolting is heavily recommended as they power throttle very often unless they are modded in some way or have a high power limit.
  ## Definitions of HWiNFO Performance Limits
-   | Performance Limit                         | Abbreviation | Definition                                                      |
-   | :---------------------------------------- | :----------: | :-------------------------------------------------------------- |
-   | Performance Limit - Power                 | Pwr          | GPU has hit the power limit defined by its VBIOS and throttled. | 
-   | Performance Limit - Thermal               | Thrm         | GPU has hit the thermal limit and throttled.                    |
-   | Performance Limit - Reliability Voltage   | vRel         | Too much voltage for current temps.                             |
-   | Performance Limit - Max Operating Voltage | VOp          | GPU has hit the voltage limit defined by its VBIOS.             |
-   | Performance Limit - Utilization           | Util         | GPU is not under full load.                                     |
+  * Here is a list of the all the abbreviations and definitons of performance limits in HWiNFO:
+  
+    | Performance Limit                         | Abbreviation | Definition                                                      |
+    | :---------------------------------------- | :----------: | :-------------------------------------------------------------- |
+    | Performance Limit - Power                 | Pwr          | GPU has hit the power limit defined by its VBIOS and throttled. | 
+    | Performance Limit - Thermal               | Thrm         | GPU has hit the thermal limit and throttled.                    |
+    | Performance Limit - Reliability Voltage   | vRel         | Too much voltage for current temps.                             |
+    | Performance Limit - Max Operating Voltage | VOp          | GPU has hit the voltage limit defined by its VBIOS.             |
+    | Performance Limit - Utilization           | Util         | GPU is not under full load.                                     |
  ## Misconceptions
   * Overclocking is dangerous: Modern Nvidia GPUs are locked in terms of how far you can push the voltage unless you have a modded VBIOS or have a physical modification to your card. The voltage that your card will use is safe and increasing clock speeds will not increase the voltage to unsafe values.
   * Overclocking too much is bad: There is no such thing as overclocking a modern GPU with a hard voltage lock and a normal VBIOS too much. The only time where an overclock is “bad” is when it’s unstable and that is fixed by stability testing.
