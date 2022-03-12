@@ -98,6 +98,8 @@
 
      
 # Overclocking
+  
+  * **Before proceeding, ensure you have read the [Setup](#setup) portion of the guide.**
   ## Finding a Core Clock
   1. Open Afterburner and put the core clock offset to 75 as a baseline.
   
@@ -130,6 +132,7 @@
   * Test the overclock, see if it is stable in both benchmarks and games, and monitor the temperatures using HWiNFO and stay under 80°C on the core and 95°C for hotspot.
   * If stable, increase memory clock by 50-100 MHz and if unstable, decrease memory clock in increments of 50-100 MHz and retest. Continue repeating this process until you have found your maximum stable overclock.
  # Undervolting
+  * **Before proceeding, ensure you have read the [Setup](#setup) portion of the guide.**
   * Undervolting can be done by itself or in combination with [overclocking](#overclocking). Increasing the core clock after an undervolt will reset the graph so you will need to redo the undervolt each time you increase the core clock. *This does not apply to the memory clock.*
   ## Finding a Voltage
   1. Click CTRL F to open the curve editor and [this video guide](https://www.youtube.com/watch?v=LPpW9yXHvOU) and start at a baseline of 900 mV.
