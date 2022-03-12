@@ -91,10 +91,10 @@
  ## Misconceptions
   * Overclocking is dangerous: Modern Nvidia GPUs are locked in terms of how far you can push the voltage unless you have a modded VBIOS or have a physical modification to your card. The voltage that your card will use is safe and increasing clock speeds will not increase the voltage to unsafe values.
   * Overclocking too much is bad: There is no such thing as overclocking a modern GPU with a hard voltage lock and a normal VBIOS too much. The only time where an overclock is “bad” is when it’s unstable and that is fixed by stability testing.
-  * Undervolting will lower performance: Undervolting may not be optimal for every card. However, it will improve performance when power limited, and reduce temperatures otherwise (12.5 - 15 MHz increase for every 5°C cooler).
+  * Undervolting will lower performance: Undervolting may not be optimal for every card. However, it will improve performance when power limited, and reduce temperatures otherwise (12.5 (Pascal) - 15 MHz (Turing + Ampere) increase for every 5°C cooler).
   * Core voltage adds more voltage: The core voltage slider will generally not do much but it increases the aggressiveness of the V/F curve and makes your GPU use the higher voltage points within the threshold of safe voltages of the card, but does not add more voltage.
   * Dragging the point at the correct voltage to your desired clock speed is a common way to undervolt. This is an [unoptimal way](https://www.youtube.com/watch?v=RH3FZXvBkiE) because of the effective clock speed <img align="center" src="https://cdn.discordapp.com/attachments/714879622181028032/874460000565739550/unknown.png"> being lower than the clock speed displayed <img align="center" src="https://cdn.discordapp.com/attachments/714879622181028032/945465118664323092/unknown.png"> when using this method. Instead, use the slider in Afterburner to change clock speeds.
-  * The best or maximum overclock for a certain car: There is no such thing as a best or maximum overclock, every physical chip is different and will overclock differently. This is why copying settings is not advisable as there may be more headroom to overclock, or it may be unstable.
+  * The best or maximum overclock for a certain card: There is no such thing as a best or maximum overclock, every physical chip is different and will overclock differently. This is why copying settings is not advisable as there may be more headroom to overclock, or it may be unstable.
 
      
 # Overclocking
@@ -111,7 +111,7 @@
   
   4. Test the overclock, see if it is stable in both benchmarks and games, and monitor the temperatures using HWiNFO and stay under 80°C on the core and 95°C for hotspot.
   
-  5. If stable, increase core clock speeds in increments of +15 MHz/12.5 MHz using the slider or by typing in a value. If the benchmarks or games crash, decrease clock speeds by the same amount and retest until you have reached stability. You will be limited by temperatures (always), and your card's power limit. There is no "limit" on how far you can overclock, however, you will know you reached the limit once you experience errors or crashes in stress tests and games. Keep in mind that an overclock can be stable in one game but not another.
+  5. If stable, increase core clock speeds in increments of +15 MHz (Turing + Ampere) /12.5 MHz (Pascal) using the slider or by typing in a value. If the benchmarks or games crash, decrease clock speeds by the same amount and retest until you have reached stability. You will be limited by temperatures (always), and your card's power limit. There is no "limit" on how far you can overclock, however, you will know you reached the limit once you experience errors or crashes in stress tests and games. Keep in mind that an overclock can be stable in one game but not another.
   ## Finding a Memory Clock
   * After you have tested the core overclock sufficiently and confirmed its stability, you can start increasing the memory clock.
   
@@ -226,7 +226,7 @@
    * For starters, taking off your side panel can improve thermals in airflow limited scenarios; if they do, a case with more airflow will help thermals considerably.
    * Repasting your GPU with a high-quality paste such as NT-H2, KPX, GELID GC-Extreme, or MX-4/5 (budget). It’ll last a long time and has an incredible impact on temperatures.
    * Deshrouding and adding fans such as Phanteks T30s, Noctua NF-A12x25s, or ARCTIC P12s (budget) are also a good way to improve temps as stock fans tend to not be that great.
-   * A more aggressive fan curve on your CPU, GPU, or case can help with airflow and thermals. Go as high as your audibly tolerable.
+   * A more aggressive fan curve on your CPU, GPU, or case can help with airflow and thermals. Go as high as audibly tolerable.
    * Removing dust filters can help with airflow due to the misalignment of holes.
    * Some GPU backplates act as an insulator instead of a heat dissipator and replacing/removing it may be beneficial.
    * A PCI fan bracket mounted with fans blowing directly under the GPU may improve airflow.
