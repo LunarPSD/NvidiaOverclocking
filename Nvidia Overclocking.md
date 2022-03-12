@@ -1,32 +1,47 @@
 # Table of Contents
  
 1. [Prerequisites and Stability Tests](#prerequisites-and-stability-tests)
-   1. [Overclocking Software](#overclocking-software)
-   2. [Monitoring Software](#monitoring-software)
-   3. [Benchmarks](#benchmarks)
+   1. [Setup](#setup)
+   2. [Overclocking Software](#overclocking-software)
+   3. [Monitoring Software](#monitoring-software)
+   4. [Benchmarks](#benchmarks)
       1. [Recommended](#recommended)
       2. [Avoid](#avoid)
 2. [Overclocking Info](#overclocking-info)
-   1. [What is overclocking and undervolting?](#what-is-overclocking-and-undervolting)
+   1. [What is Overclocking and Undervolting?](#what-is-overclocking-and-undervolting)
    2. [Benefits of Overclocking and Undervolting](#benefits-of-overclocking-and-undervolting)
    3. [Overclocking vs. Undervolting](#overclocking-vs-undervolting)
    4. [Definitions of HWiNFO Performance Limits](#definitions-of-hwinfo-performance-limits)
    5. [Misconceptions](#misconceptions)
 4. [Overclocking](#overclocking)
-   1. [Setup](#setup)
-   2. [Finding a Core Clock](#finding-a-core-clock)
-   3. [Finding a Memory Clock](#finding-a-memory-clock)
-   4. [Undervolting](#undervolting)
-5. [Flashing a VBIOS](#flashing-a-vbios)
+   1. [Finding a Core Clock](#finding-a-core-clock)
+   2. [Finding a Memory Clock](#finding-a-memory-clock)
+5. [Undervolting](#undervolting)
+   1. [Finding a Voltage](#finding-a-voltage)
+   2. [Tuning Voltage](#tuning-voltage)
+7. [Flashing a VBIOS](#flashing-a-vbios)
    1. [VBIOS Information](#vbios-information)
    2. [How to Flash a VBIOS](#how-to-flash-a-vbios)
    3. [VBIOS Troubleshooting](#vbios-troubleshooting)
-6. [Miscellaneous](#miscellaneous)
-   1. [Fixing a boot loop](#fixing-a-boot-loop)
+8. [Miscellaneous](#miscellaneous)
+   1. [Fixing a Boot Loop](#fixing-a-boot-loop)
    2. [NVCleanstall/DDU](#nvcleanstallddu)
-7. [Tips and Tricks](#tips-and-tricks)
+9. [Tips and Tricks](#tips-and-tricks)
    
 # Prerequisites and Stability Tests
+  ## Setup
+  1. Download [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) and set a fan curve. Settings -> Fan -> Enable User Defined Control. Set a fan curve as high as possible and is still audibly tolerable. Setting a very high fan curve is always preferable for benchmarking, but the same overclock settings may not be stable on a lower fan speed.
+  
+     ![image](https://user-images.githubusercontent.com/69487009/155074841-203d5993-73db-49fe-bb48-8289d175a0ef.png)
+
+  2. While still in settings, go to User Interface -> User interface skinning properties and select a skin such as the MSI Cyborg Afterburner skin as it will be easier to follow.
+  3. Download [HWiNFO](https://www.hwinfo.com/download/) and run it in sensors only.
+  
+     ![image](https://user-images.githubusercontent.com/69487009/155072633-1e3f814e-3350-4043-8640-b36f842d52c6.png)
+  
+  4. Go to MSI Afterburner, max out power and temp limits, and put the priority on the power limit. Note that laptops and some GPUs will not be able to go over 100%. Some GPUs can have a higher power limit by shunting or by [flashing a higher power limit VBIOS](#flashing-a-vbios).
+  
+     ![image](https://user-images.githubusercontent.com/69487009/155073843-d60e666a-f3b8-4422-91a8-e331f663270b.png)
   ## Overclocking Software
    * [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards): This software is the most widely used and robust. Other software may be lacking in certain features and are generally not recommended.
   ## Monitoring Software
@@ -64,7 +79,7 @@
  ## Overclocking vs. Undervolting
   * Overclocking typically increases temperatures to gain performance. Undervolting will decrease temperatures and voltage to give consistent performance. While with overclocking, you may achieve a higher clock speed than undervolting, that clock speed may not be sustained under stress. They both have their place and you should choose the one that better fits your needs. For Ampere specifically, undervolting is heavily recommended as they power throttle very often unless they are modded in some way or have a high power limit.
  ## Definitions of HWiNFO Performance Limits
-  * Here is a list of the all the abbreviations and definitons of performance limits in HWiNFO:
+  * Here is a list of all the abbreviations and definitions of performance limits in HWiNFO:
   
     | Performance Limit                         | Abbreviation | Definition                                                      |
     | :---------------------------------------- | :----------: | :-------------------------------------------------------------- |
@@ -81,74 +96,74 @@
   * Dragging the point at the correct voltage to your desired clock speed is a common way to undervolt. This is an [unoptimal way](https://www.youtube.com/watch?v=RH3FZXvBkiE) because of the effective clock speed <img align="center" src="https://cdn.discordapp.com/attachments/714879622181028032/874460000565739550/unknown.png"> being lower than the clock speed displayed <img align="center" src="https://cdn.discordapp.com/attachments/714879622181028032/945465118664323092/unknown.png"> when using this method. Instead, use the slider in Afterburner to change clock speeds.
   * The best or maximum overclock for a certain car: There is no such thing as a best or maximum overclock, every physical chip is different and will overclock differently. This is why copying settings is not advisable as there may be more headroom to overclock, or it may be unstable.
 
+     
 # Overclocking
- ## Setup
-  1. Download [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) and set a fan curve. Settings -> Fan -> Enable User Defined Control. Set a fan curve as high as possible and is still audibly tolerable. Setting a very high fan curve is always preferable for benchmarking, but the same overclock settings may not be stable on a lower fan speed.
-  
-     ![image](https://user-images.githubusercontent.com/69487009/155074841-203d5993-73db-49fe-bb48-8289d175a0ef.png)
-
-  2. While still in settings, go to User Interface -> User interface skinning properties and select a skin such as the MSI Cyborg Afterburner skin as it will be easier to follow.
-  3. Download [HWiNFO](https://www.hwinfo.com/download/) and run it in sensors only.
-  
-     ![image](https://user-images.githubusercontent.com/69487009/155072633-1e3f814e-3350-4043-8640-b36f842d52c6.png)
-  
-  4. Go to MSI Afterburner, max out power and temp limits, and put the priority on the power limit. Note that laptops and some GPUs will not be able to go over 100%. Some GPUs can have a higher power limit by shunting or by [flashing a higher power limit VBIOS](#flashing-a-vbios).
-  
-     ![image](https://user-images.githubusercontent.com/69487009/155073843-d60e666a-f3b8-4422-91a8-e331f663270b.png)
-
- ## Finding a Core Clock
-  * Open Afterburner and put the core clock to 75 as a baseline.
+  ## Finding a Core Clock
+  1. Open Afterburner and put the core clock offset to 75 as a baseline.
   
      ![image](https://user-images.githubusercontent.com/69487009/155863420-bc3c3d17-07b9-4992-b3d6-1550352a7bbd.png)
 
-  * Apply the settings <img align="center" src="https://user-images.githubusercontent.com/69487009/155014073-4aac5d7b-91d6-4b96-abd1-ab51287cb248.png"> and save <img align="center" src="https://user-images.githubusercontent.com/69487009/155004968-6f7ee82e-1575-4605-9932-644e5d702d45.png"> them to a profile. <img align="center" src="https://user-images.githubusercontent.com/69487009/155006086-5e300602-f099-4c6e-a3bf-29962b2905d2.png">
-  * Click this <img align="center" src="https://user-images.githubusercontent.com/69487009/155013987-f6c7f084-c4cb-4804-bc98-1786056959a7.png"> to have the overclock applied at startup.
-  * Test the overclock, see if it is stable in both benchmarks and games, and monitor the temperatures using HWiNFO and stay under 80°C on the core and 95°C for hotspot.
-  * If stable, increase core clock speeds in increments of +15 MHz/12.5 MHz using the slider or by typing in a value. If the benchmarks or games crash, decrease clock speeds by the same amount and retest until you have reached stability. You will be limited by temperatures (always), and your card's power limit. There is no "limit" on how far you can overclock, however, you will know you reached the limit once you experience errors or crashes in stress tests and games. Keep in mind that an overclock can be stable in one game but not another.
+  2. Apply the settings <img align="center" src="https://user-images.githubusercontent.com/69487009/155014073-4aac5d7b-91d6-4b96-abd1-ab51287cb248.png"> and save <img align="center" src="https://user-images.githubusercontent.com/69487009/155004968-6f7ee82e-1575-4605-9932-644e5d702d45.png"> them to a profile. <img align="center" src="https://user-images.githubusercontent.com/69487009/155006086-5e300602-f099-4c6e-a3bf-29962b2905d2.png">
+  
+  3. Click this <img align="center" src="https://user-images.githubusercontent.com/69487009/155013987-f6c7f084-c4cb-4804-bc98-1786056959a7.png"> to have the overclock applied at startup.
+  
+  4. Test the overclock, see if it is stable in both benchmarks and games, and monitor the temperatures using HWiNFO and stay under 80°C on the core and 95°C for hotspot.
+  
+  5. If stable, increase core clock speeds in increments of +15 MHz/12.5 MHz using the slider or by typing in a value. If the benchmarks or games crash, decrease clock speeds by the same amount and retest until you have reached stability. You will be limited by temperatures (always), and your card's power limit. There is no "limit" on how far you can overclock, however, you will know you reached the limit once you experience errors or crashes in stress tests and games. Keep in mind that an overclock can be stable in one game but not another.
   ## Finding a Memory Clock
   * After you have tested the core overclock sufficiently and confirmed its stability, you can start increasing the memory clock.
   
      ![image](https://user-images.githubusercontent.com/69487009/155074055-b1c4fab6-7f5f-4cc5-9bb6-f10a564705b5.png)
 
-  * Start at a memory clock of 500 MHz and increase in increments of 50-100 MHz. Note that memory clocks will usually scale much higher than core clocks (even over 1000 MHz).
-  * To test the stability of the memory clock, you will need to look for performance regressions and artifacts. If you see any regression or lowering in score or any visual artifacts, decrease the memory clock by 50-100 MHz and retest. The recommended benchmark for finding performance regressions (GDDR6X) is [Unigine Superposition](https://benchmark.unigine.com/superposition) as the scores are consistent.
+  1. Start at a memory clock offset of 500 MHz and increase in increments of 50-100 MHz. Note that memory clocks will usually scale much higher than core clocks (even over 1000 MHz).
+  
+  2. To test the stability of the memory clock, you will need to look for performance regressions and artifacts. If you see any regression or lowering in score or any visual artifacts, decrease the memory clock by 50-100 MHz and retest. The recommended benchmark for finding performance regressions (GDDR6X) is [Unigine Superposition](https://benchmark.unigine.com/superposition) as the scores are consistent.
   
      ![image](https://user-images.githubusercontent.com/69487009/155003914-986b3fbb-6f76-4f8a-b4c5-0d5351b7d2f6.png)
      
-  * Here are some examples of artifacting:
+     2. Here are some examples of artifacts:
   
-     ![image](https://user-images.githubusercontent.com/69487009/156505132-831c5bbe-a475-4bc5-9065-e5230612cb8e.png)
+        ![image](https://user-images.githubusercontent.com/69487009/156505132-831c5bbe-a475-4bc5-9065-e5230612cb8e.png)
      
-     ![image](https://user-images.githubusercontent.com/69487009/156505872-97d4ee36-6799-4c36-a9b1-d5672827fcba.png)
+        ![image](https://user-images.githubusercontent.com/69487009/156505872-97d4ee36-6799-4c36-a9b1-d5672827fcba.png)
 
   * Test the overclock, see if it is stable in both benchmarks and games, and monitor the temperatures using HWiNFO and stay under 80°C on the core and 95°C for hotspot.
   * If stable, increase memory clock by 50-100 MHz and if unstable, decrease memory clock in increments of 50-100 MHz and retest. Continue repeating this process until you have found your maximum stable overclock.
- ## Undervolting
-  * Click CTRL F to open the curve editor and [this video guide](https://www.youtube.com/watch?v=LPpW9yXHvOU) and start at a baseline of 900 mV.
-  * Your curve should look like this to start:
- 
-     ![image](https://user-images.githubusercontent.com/69487009/156475780-19ff599b-56da-4d43-ae22-3ac738e9bc05.png)
+ # Undervolting
+  * Undervolting can be done by itself or in combination with [overclocking](#overclocking). Increasing the core clock after an undervolt will reset the graph so you will need to redo the undervolt each time you increase the core clock. *This does not apply to the memory clock.*
+  ## Finding a Voltage
+  1. Click CTRL F to open the curve editor and [this video guide](https://www.youtube.com/watch?v=LPpW9yXHvOU) and start at a baseline of 900 mV.
+     1. Your curve should look like this to start:
+    
+       ![image](https://user-images.githubusercontent.com/69487009/156475780-19ff599b-56da-4d43-ae22-3ac738e9bc05.png)
 
-  * Select all the points past the voltage you want (900 mV) by holding down shift and left click and highlighting.
-  * Drag all the points down by selecting a point and dragging it down. Make sure the highest point on the part you are dragging down is lower than the highest point to the left of it.
-  * Your curve should now look like this:
+  2. Select all the points past the voltage you want (900 mV) by holding down shift and left click and highlighting.
+  3. Drag all the points down by selecting a point and dragging it down. Make sure the highest point on the part you are dragging down is lower than the highest point to the left of it.
  
-     ![image](https://user-images.githubusercontent.com/69487009/155075101-33097614-e25c-4678-aa7f-342abfaaedff.png)
+     3. Your curve should now look like this:
+       
+       ![image](https://user-images.githubusercontent.com/69487009/155075101-33097614-e25c-4678-aa7f-342abfaaedff.png)
   
-  * Click apply <img align="center" src=https://user-images.githubusercontent.com/69487009/155014083-1b40ab17-e804-42fc-b524-94d7eba65dc1.png> to apply the undervolt and voltage curve you set.
+  4. Apply the settings <img align="center" src="https://user-images.githubusercontent.com/69487009/155014073-4aac5d7b-91d6-4b96-abd1-ab51287cb248.png"> and save <img align="center" src="https://user-images.githubusercontent.com/69487009/155004968-6f7ee82e-1575-4605-9932-644e5d702d45.png"> them to a profile. <img align="center" src="https://user-images.githubusercontent.com/69487009/155006086-5e300602-f099-4c6e-a3bf-29962b2905d2.png">
+  
+  5. Click this <img align="center" src="https://user-images.githubusercontent.com/69487009/155013987-f6c7f084-c4cb-4804-bc98-1786056959a7.png"> to have the overclock applied at startup.
+  
+     5. Your curve should look like this:
  
-  * Your curve should look like this:
+       ![image](https://user-images.githubusercontent.com/69487009/155066400-0bce9ab3-da3a-431e-98e5-3ba9b88271d4.png)
+       
+  ## Tuning Voltage
+  1. Run a variety of workloads and games and check HWiNFO for power throttling in sensors only under GPU Performance Limiters.
  
-     ![image](https://user-images.githubusercontent.com/69487009/155066400-0bce9ab3-da3a-431e-98e5-3ba9b88271d4.png)
-
-  * Run a variety of workloads and games and check HWiNFO for power throttling in sensors only under GPU Performance Limiters.
- 
-     ![image](https://user-images.githubusercontent.com/69487009/155013749-0e22d23b-4d01-4e3a-b253-374171d38ae2.png)
+       ![image](https://user-images.githubusercontent.com/69487009/155013749-0e22d23b-4d01-4e3a-b253-374171d38ae2.png)
      
-  * If you are power throttling in-game, lower voltage by 25 mV, and retest. Once you are satisfied with temperatures and are not power throttling, you have found the optimum voltage.
-  * Lowering voltage by 25 mV means that you will be at 875 mV from 900 mV and your curve should look like this:
+  2. If you are power throttling in-game, lower voltage by 25 mV, and retest. Once you are satisfied with temperatures and are not power throttling, you have found the optimum voltage.
+  
+     2. Lowering voltage by 25 mV means that you will be at 875 mV from 900 mV and your curve should look like this:
  
-     ![image](https://user-images.githubusercontent.com/69487009/155066793-85249e79-b72a-492c-96a3-48d5e5fe5c21.png)
+        ![image](https://user-images.githubusercontent.com/69487009/155066793-85249e79-b72a-492c-96a3-48d5e5fe5c21.png)
+        
+  3. Continue to lower voltage until satisfied with temperatures and power throttling. Too low of a voltage may have performance regression because of the decreased core clock.
 
 # Flashing a VBIOS
  This section is for people who have already tested their overclocks but still want that additional headroom. Flashing a VBIOS can be very helpful as it can increase power limits which can increase overclocking headroom. It can also be risky and will void the warranty.
