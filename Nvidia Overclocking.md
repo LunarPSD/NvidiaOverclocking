@@ -91,7 +91,7 @@
  ## Misconceptions
   * Overclocking is dangerous: Modern Nvidia GPUs are locked in terms of how far you can push the voltage unless you have a modded VBIOS or have a physical modification to your card. Therefore, your card’s voltage is safe, and increasing clock speeds will not increase the voltage to unsafe values.
   * Overclocking too much is bad: There is no such thing as overclocking a modern GPU with a hard voltage lock and a normal VBIOS too much. The only time an overclock is “bad” is when it’s unstable, fixed by stability testing.
-  * Undervolting will lower performance: Undervolting may not be optimal for every card. However, it will improve performance when power limited, and reduce temperatures otherwise (12.5 (Pascal) - 15 MHz (Turing + Ampere) increase for every 5°C cooler).
+  * Undervolting will lower performance: Undervolting may not be optimal for every card. However, it will improve performance when power limited, and reduce temperatures otherwise (12.5 (Pascal) - 15 MHz (Turing + Ampere) increase for every 5 °C cooler).
   * Core voltage adds more voltage: The core voltage slider will generally not do much, but it increases the aggressiveness of the V/F curve and makes your GPU use the higher voltage points within the threshold of safe voltages of the card, but does not add more voltage.
   * Dragging the point at the correct voltage to your desired clock speed is a common way to undervolt. This is an [unoptimal way](https://www.youtube.com/watch?v=RH3FZXvBkiE) because of the effective clock speed <img align="center" src="https://cdn.discordapp.com/attachments/714879622181028032/874460000565739550/unknown.png"> being lower than the clock speed displayed <img align="center" src="https://cdn.discordapp.com/attachments/714879622181028032/945465118664323092/unknown.png"> when using this method. Instead, use the slider in Afterburner to change clock speeds.
   * The best or maximum overclock for a specific card: There is no best or maximum overclock. Every physical chip is different and will overclock differently, so copying settings is not advisable as there may be more headroom to overclock, or it may be unstable.
@@ -109,7 +109,7 @@
   
   3. Click this <img align="center" src="https://user-images.githubusercontent.com/69487009/155013987-f6c7f084-c4cb-4804-bc98-1786056959a7.png"> to have the overclock applied at startup.
   
-  4. Test the overclock, see if it is stable in both benchmarks and games, and monitor the temperatures using HWiNFO and stay under 80°C on the core and 95°C for the hotspot.
+  4. Test the overclock, see if it is stable in both benchmarks and games, and monitor the temperatures using HWiNFO and stay under 80 °C on the core and 95 °C for the hotspot.
   
   5. If stable, increase core clock speeds in increments of +15 MHz (Turing + Ampere) /12.5 MHz (Pascal) using the slider or typing in a value. If the benchmarks or games crash, decrease clock speeds by the same amount and retest until you have reached stability. Temperatures and power limits will always be limiting factors. There is no “limit” on how far you can overclock; however, you will know you have reached the limit once you experience errors or crashes in stress tests and games. Remember that an overclock can be stable in one game but not another.
   ## Finding a Memory Clock
@@ -129,7 +129,7 @@
      
         ![image](https://user-images.githubusercontent.com/69487009/156505872-97d4ee36-6799-4c36-a9b1-d5672827fcba.png)
 
-  * Test the overclock, see if it is stable in both benchmarks and games, and monitor the temperatures using HWiNFO and stay under 80°C on the core and 95°C for the hotspot.
+  * Test the overclock, see if it is stable in both benchmarks and games, and monitor the temperatures using HWiNFO and stay under 80 °C on the core and 95 °C for the hotspot.
   * If stable, increase memory clock by 50-100 MHz and if unstable, decrease memory clock in increments of 50-100 MHz and retest. Continue repeating this process until you have found your maximum stable overclock.
  # Undervolting
   * **Before proceeding, ensure you have read the [Setup](#setup) portion of the guide.**
