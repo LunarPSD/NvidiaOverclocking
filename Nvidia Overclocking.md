@@ -101,7 +101,7 @@
   
   * **Before proceeding, ensure you have read the [Setup](#setup) portion of the guide.**
   ## Finding a Core Clock
-  1. Open Afterburner and put the core clock offset to 75 as a baseline.
+  1. Open Afterburner and put the core clock offset to +75 as a baseline.
   
      ![image](https://user-images.githubusercontent.com/69487009/155863420-bc3c3d17-07b9-4992-b3d6-1550352a7bbd.png)
 
@@ -135,13 +135,13 @@
   * **Before proceeding, ensure you have read the [Setup](#setup) portion of the guide.**
   * Undervolting can be done by itself or combined with [overclocking](#overclocking). Increasing the core clock after an undervolt will reset the graph, so you must redo the undervolt each time you increase the core clock. *This does not apply to the memory clock.*
   ## Finding a Voltage
-  1. Click CTRL F to open the curve editor and [this video guide](https://www.youtube.com/watch?v=LPpW9yXHvOU) and start at a baseline of 900 mV.
+  1. Click CTRL F to open the curve editor and [this video guide](https://www.youtube.com/watch?v=LPpW9yXHvOU) and start at a baseline of 900 mV. Anything above this value will likely power throttle on many cards, and going above this value is situational, and the temperature difference will not be as noticeable. You can raise this in a later step.
      1. Your curve should look like this to start:
     
        ![image](https://user-images.githubusercontent.com/69487009/156475780-19ff599b-56da-4d43-ae22-3ac738e9bc05.png)
 
   2. Select all the points past the voltage you want (900 mV) by holding down shift and left click and highlighting.
-  3. Drag all the points down by selecting a point and dragging it down. Make sure the highest point on the part you are dragging down is lower than the highest point to its left.
+  3. Drag all the points down by selecting a point and dragging it down. Make sure the highest point on the part you are dragging down is lower than the highest point to its left, but other than that, you can drag it down anywhere.
  
      3. Your curve should now look like this:
        
@@ -224,7 +224,7 @@
  * The most crucial thing about overclocking is experimentation; try different things like increasing voltage to get higher clocks or lower voltage to get lower temps and more consistent clocks.
  * Temps are important. GPUs should stay as cool as possible for longevity, audibility, and performance:
    * For starters, taking off your side panel can improve thermals in limited airflow scenarios; if they do, a case with more airflow will help thermals considerably.
-   * Repasting your GPU with a high-quality paste such as NT-H2, KPX, GELID GC-Extreme, or MX-4/5 (budget). It’ll last a long time and has an incredible impact on temperatures.
+   * Repasting your GPU with a high-quality paste such as NT-H2, KPX, GELID GC-Extreme, or MX-4 (budget). It’ll last a long time and has an incredible impact on temperatures. Spreading the paste to ensure it covers the entire die is crucial.
    * Deshrouding and adding fans such as Phanteks T30s, Noctua NF-A12x25s, or ARCTIC P12s (budget) are also an excellent way to improve temps as stock fans tend not to be that great.
    * A more aggressive fan curve on your CPU, GPU, or case can help airflow and thermals. Go as high as audibly tolerable.
    * Removing dust filters can help with airflow due to the misalignment of holes.
