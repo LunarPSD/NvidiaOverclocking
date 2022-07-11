@@ -141,7 +141,7 @@
        ![image](https://user-images.githubusercontent.com/69487009/156475780-19ff599b-56da-4d43-ae22-3ac738e9bc05.png)
 
   2. Select all the points past the voltage you want (900 mV) by holding down shift and left click and highlighting.
-  3. Drag all the points down by selecting a point and dragging it down. Make sure the highest point on the part you are dragging down is lower than the highest point to its left, but other than that, you can drag it down anywhere.
+  3. Drag all the points down by selecting a point and dragging it all the way down down. Make sure the highest point on the part you are dragging down is lower than the highest point to its left.
  
      3. Your curve should now look like this:
        
@@ -217,8 +217,11 @@
    * Run DDU, select GPU as the device, and click clean and restart.
    * Boot into your computer like normal and run NVCleanstall.
    * Select use driver files on disk and select the driver you installed earlier.
-   * Make sure everything is unchecked except for PhysX, and maybe HD audio via HDMI/USB-C Driver if you use those.
-   * Click next and uncheck everything other than Disable Installer Telemetry & Advertising. Lastly, click install, and your drivers will install.
+   * Make sure everything is unchecked unless you need PhysX or the HD audio via HDMI/USB-C Driver.
+   
+      ![image](https://user-images.githubusercontent.com/69487009/178170410-5f59263d-37f6-4234-84d5-f2a7889b14c2.png)
+   * Click next and uncheck everything other than Disable Installer Telemetry & Advertising.
+   * Lastly, click install, and your drivers will install.
  
 # Tips and Tricks
  * The most crucial thing about overclocking is experimentation; try different things like increasing voltage to get higher clocks or lower voltage to get lower temps and more consistent clocks.
