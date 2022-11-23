@@ -30,18 +30,23 @@
    
 # Prerequisites and Stability Tests
   ## Setup
-  1. Download [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) and set a fan curve. Settings -> Fan -> Enable User Defined Control. Set a fan curve as high as possible and is still audibly tolerable. Setting a very high fan curve is always preferable for benchmarking, but the same overclock settings may not be stable on a lower fan speed.
+  1. Download [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) and set a fan curve. Settings -> Fan -> Enable User Defined Control. Set a fan curve as high as possible while still being audibly tolerable. Setting a high fan curve is always preferable for benchmarking, but the same overclock settings may not be stable on a lower fan speed.
   
      ![image](https://user-images.githubusercontent.com/69487009/155074841-203d5993-73db-49fe-bb48-8289d175a0ef.png)
 
-  2. While still in settings, go to User Interface -> User interface skinning properties and select a skin such as the MSI Cyborg Afterburner skin as it will be easier to follow.
+  2. While still in settings, go to User Interface -> User interface skinning properties and select a skin, such as the MSI Cyborg Afterburner skin, as it will be easier to follow.
   3. Download [HWiNFO](https://www.hwinfo.com/download/) and run it in sensors only.
   
      ![image](https://user-images.githubusercontent.com/69487009/155072633-1e3f814e-3350-4043-8640-b36f842d52c6.png)
   
-  4. Go to MSI Afterburner, max out power and temp limits, and put the priority on the power limit. Note that laptops and some GPUs will not be able to go over 100%. Some GPUs can have a higher power limit by shunting or by [flashing a higher power limit VBIOS](#flashing-a-vbios).
+  4. Go to MSI Afterburner, max out power and temp limits, and prioritize the power limit. Note that laptops and some GPUs cannot go over 100%. Some GPUs can have a higher power limit by shunting or by [flashing a higher power limit VBIOS](#flashing-a-vbios).
   
      ![image](https://user-images.githubusercontent.com/69487009/155073843-d60e666a-f3b8-4422-91a8-e331f663270b.png)
+  
+  5. If using a Lovelace GPU, disable ECC in the Nvidia Control Panel to get more performance (needs more testing).
+     
+     ![image](https://cdn.discordapp.com/attachments/714879622181028032/1044790464554999828/image.png)
+     
   ## Overclocking Software
    * [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards): This software is the most widely used and robust. Other software may be lacking in certain features and are generally not recommended.
   ## Monitoring Software
@@ -55,29 +60,34 @@
    
      ![image](https://user-images.githubusercontent.com/69487009/155036041-4eed7d4b-1103-4d88-876c-d5878cbaf70e.png)
    
-   * [3DMark](https://store.steampowered.com/app/223850/3DMark/): This is widely used to stress your GPU well and is also good at finding instability. Note that it is not recommended for performance regressions as there is a lot of variance in scores, and Superposition is better for getting accurate scores. There is a demo version you can download for free. Run the Time Spy benchmark as it is the most relevant test.
+   * [3DMark](https://store.steampowered.com/app/223850/3DMark/): This is widely used to stress your GPU well and is also good at finding instability. Note that it is not recommended for performance regressions as there is a lot of variance in scores, and Superposition is better for getting accurate scores. There is a demo version you can download for free. Run the Time Spy benchmark, as it is the most relevant test.
    
      ![image](https://user-images.githubusercontent.com/69487009/156465473-db75ddc7-13ed-45aa-bce9-6154aeb50d88.png)
 
-   * [OCCT](https://www.ocbase.com/): This test is the best for finding errors and stressing your GPU; however, it requires careful fine-tuning and takes a while to find the “sweet spot” as it power throttles at stock settings. Also, make sure you do not turn off your monitor as some graphics drivers crash because of this.
+   * [OCCT](https://www.ocbase.com/): This test is the best for finding errors and stressing your GPU; however, it requires careful fine-tuning and takes a while to find the “sweet spot” as it power throttles at stock settings. Also, make sure you do not turn off your monitor, as some graphics drivers crash because of this.
    
-     ![image](https://user-images.githubusercontent.com/69487009/155036223-fe2aebc0-f60e-433f-81e6-325db9e3cfa8.png)
-     * V10: Go to the 3D tab under test. Turn on error detection and shader complexity to 8. Next, decrease GPU usage limit (%) until you just barely (5% of the time) power throttle. Then, click start and leave it running for an hour.
-     * V11: [Coming soon](https://www.youtube.com/watch?v=QvHyalfsJdY).
+     * V10: Go to the 3D Standard tab under test. Turn on error detection and shader complexity to 8. Next, decrease the GPU usage limit (%) until you barely (5% of the time) power throttle. Then, click start and leave it running for an hour.
+     
+     ![image](https://cdn.discordapp.com/attachments/714879622181028032/1044787448024141864/image.png)
+     
+     * V11: Go to the 3D Adaptive tab under test and set the values to the screenshot below. You can tweak these values to your GPU, such as the minimum and maximum intensity. Then, click start and leave it running for an hour.
+     
+     ![image](https://cdn.discordapp.com/attachments/714879622181028032/1044786299078447114/image.png)
+
   ### Avoid
    * Furmark: Draws a lot of power and doesn’t effectively test due to elevated temperatures and power limiting.
    * Kombustor: Same issue as Furmark.
-   * Heaven: This is an ancient testing program (13 years ago) that doesn’t stress your GPU a lot. However, it can be helpful because you can run it in the background and loops for free. I would not recommend this program unless you want to run it in the background for extended periods. If you decide to use this, your settings should look like this:
+   * Heaven: This is an ancient testing program (13 years ago) that doesn’t stress your GPU much. However, it can be helpful because you can run it in the background and loop it for free. I would not recommend this program unless you want to run it in the background for extended periods. If you decide to use this, your settings should look like this:
    
      ![image](https://user-images.githubusercontent.com/69487009/155033902-2cc5dc72-f71a-48f2-b3b4-5fe1c069b65d.png)
   
 # Overclocking Info
  ## What is Overclocking and Undervolting?
-  * Overclocking is the process of increasing clock speeds and performance for generally higher heat and lower stability. For the GPU, that means increasing the speed at which the core runs and the speed the VRAM runs; core clock speeds and memory clock speeds, respectively. Undervolting limits the amount of voltage supplied to the GPU and will lower wattage, voltage, and temperatures.
+  * Overclocking is the process of increasing clock speeds and performance for generally higher heat and lower stability. For the GPU, that means increasing the speed at which the core and VRAM run, which are core and memory clock speeds, respectively. Undervolting limits the amount of voltage supplied to the GPU and will lower wattage, voltage, and temperatures.
  ## Benefits of Overclocking and Undervolting
   * Overclocking can provide those extra frames or decrease the processing time in workloads and provide you with a slightly better experience. Undervolting will reduce temperatures and voltages and provide a quiet and stable experience. Combining the two is possible and is commonly done.
  ## Overclocking vs. Undervolting
-  * Overclocking typically increases temperatures to gain performance. Undervolting will decrease temperatures and voltage to give consistent performance. While with overclocking, you may achieve a higher clock speed than undervolting, that clock speed may not be sustained under stress. They both have their place, and you should choose the one that better fits your needs. For Ampere specifically, undervolting is heavily recommended as they power throttle very often unless they are modded in some way or have a high power limit.
+  * Overclocking typically increases temperatures to gain performance. Undervolting will decrease temperatures and voltage to give consistent performance. While with overclocking, you may achieve a higher clock speed than undervolting, that clock speed may not be sustained under stress. They both have their place, and you should choose the one that better fits your needs. For Ampere and Lovelace, undervolting is heavily recommended as they power throttle very often unless they are modded in some way or have a high power limit.
  ## Definitions of HWiNFO Performance Limits
   * Here is a list of all the abbreviations and definitions of performance limits in HWiNFO:
   
@@ -90,11 +100,12 @@
     | Performance Limit - Utilization           | Util         | GPU is not under full load.                                     |
  ## Misconceptions
   * Overclocking is dangerous: Modern Nvidia GPUs are locked in terms of how far you can push the voltage unless you have a modded VBIOS or have a physical modification to your card. Therefore, your card’s voltage is safe, and increasing clock speeds will not increase the voltage to unsafe values.
-  * Overclocking too much is bad: There is no such thing as overclocking a modern GPU with a hard voltage lock and a normal VBIOS too much. The only time an overclock is “bad” is when it’s unstable, fixed by stability testing.
-  * Undervolting will lower performance: Undervolting may not be optimal for every card. However, it will improve performance when power limited, and reduce temperatures otherwise (12.5 (Pascal) - 15 MHz (Turing + Ampere) increase for every 5 °C cooler).
-  * Core voltage adds more voltage: The core voltage slider will generally not do much, but it increases the aggressiveness of the V/F curve and makes your GPU use the higher voltage points within the threshold of safe voltages of the card, but does not add more voltage.
+  * Overclocking too much is dangerous: There is no such thing as overclocking a modern GPU with a hard voltage lock and a normal VBIOS too much. An overclock is only "bad" when unstable, fixed by stability testing.
+  * Undervolting will lower performance: Undervolting will improve performance when power limited and reduce temperatures otherwise (12.5 (Pascal) - 15 MHz (Turing, Ampere, and Lovelace) increase for every 5 °C cooler).
+  * Core voltage increases voltage used: The core voltage slider will generally not do much, but it increases the aggressiveness of the V/F curve and makes your GPU use the higher voltage points within the threshold of safe voltages of the card but does not work on most modern cards.
   * Dragging the point at the correct voltage to your desired clock speed is a common way to undervolt. This is an [unoptimal way](https://www.youtube.com/watch?v=RH3FZXvBkiE) because of the effective clock speed <img align="center" src="https://cdn.discordapp.com/attachments/714879622181028032/874460000565739550/unknown.png"> being lower than the clock speed displayed <img align="center" src="https://cdn.discordapp.com/attachments/714879622181028032/945465118664323092/unknown.png"> when using this method. Instead, use the slider in Afterburner to change clock speeds.
   * The best or maximum overclock for a specific card: There is no best or maximum overclock. Every physical chip is different and will overclock differently, so copying settings is not advisable as there may be more headroom to overclock, or it may be unstable.
+  * Undervolting reduces effective clocks on Lovelace: This is a misconception caused by improper undervolting and will not happen if undervolted properly.
 
      
 # Overclocking
@@ -117,7 +128,7 @@
   
      ![image](https://user-images.githubusercontent.com/69487009/155074055-b1c4fab6-7f5f-4cc5-9bb6-f10a564705b5.png)
 
-  1. Start at a memory clock offset of 500 MHz and increase in increments of 50-100 MHz. Note that memory clocks will usually scale much higher than core clocks (even over 1000 MHz).
+  1. Start at a memory clock offset of 500 MHz and increase in 50-100 MHz increments. Memory clocks usually scale much higher than core clocks (even over 1000 MHz).
   
   2. To test the stability of the memory clock, you will need to look for performance regressions and artifacts. If you see any receding or a lower score or visual artifacts, decrease the memory clock by 50-100 MHz and retest. The recommended benchmark for finding performance regressions (GDDR6X) is [Unigine Superposition](https://benchmark.unigine.com/superposition), as the scores are consistent.
   
@@ -130,7 +141,7 @@
         ![image](https://user-images.githubusercontent.com/69487009/156505872-97d4ee36-6799-4c36-a9b1-d5672827fcba.png)
 
   * Test the overclock, see if it is stable in both benchmarks and games, and monitor the temperatures using HWiNFO and stay under 80 °C on the core and 95 °C for the hotspot.
-  * If stable, increase memory clock by 50-100 MHz and if unstable, decrease memory clock in increments of 50-100 MHz and retest. Continue repeating this process until you have found your maximum stable overclock.
+  * If stable, increase memory clock by 50-100 MHz; if unstable, decrease memory clock in 50-100 MHz increments and retest. Continue repeating this process until you have found your maximum stable overclock.
  # Undervolting
   * **Before proceeding, ensure you have read the [Setup](#setup) portion of the guide.**
   * Undervolting can be done by itself or combined with [overclocking](#overclocking). Increasing the core clock after an undervolt will reset the graph, so you must redo the undervolt each time you increase the core clock. *This does not apply to the memory clock.*
@@ -141,7 +152,7 @@
        ![image](https://user-images.githubusercontent.com/69487009/156475780-19ff599b-56da-4d43-ae22-3ac738e9bc05.png)
 
   2. Select all the points past the voltage you want (900 mV) by holding down shift and left click and highlighting.
-  3. Drag all the points down by selecting a point and dragging it all the way down down. Make sure the highest point on the part you are dragging down is lower than the highest point to its left.
+  3. Drag all the points down by selecting a point and dragging it down. Ensure the highest point on the part you are dragging down is lower than the highest point to its left.
  
      3. Your curve should now look like this:
        
@@ -162,7 +173,7 @@
      
   2. If you are power throttling in-game, lower voltage by 25 mV and retest. Once you are satisfied with temperatures and are not power throttling, you have found the optimum voltage.
   
-     2. Lowering voltage by 25 mV means that you will be at 875 mV from 900 mV, and your curve should look like this:
+     1. Lowering voltage by 25 mV means that you will be at 875 mV from 900 mV, and your curve should look like this:
  
         ![image](https://user-images.githubusercontent.com/69487009/155066793-85249e79-b72a-492c-96a3-48d5e5fe5c21.png)
         
@@ -172,9 +183,9 @@
  This section is for people who have already tested their overclocks but still want additional headroom. Flashing a VBIOS can be very helpful as it can increase power limits and overclocking headroom. However, it can also be risky and will void the warranty.
  ## VBIOS Information
   * Ensure that the card of the new VBIOS you’re flashing from has the same power connectors as the card you’re flashing to (2x8 pin, 1x12 pin, etc.).
-  * Check the number of HDMI and DP ports of the new VBIOS and the card you’re flashing and make sure they match. Note that this is not a mandatory step, but you may lose ports if they are different.
+  * Check the number of HDMI and DP ports of the new VBIOS and the card you’re flashing and make sure they match. Note that this is not mandatory, but ports may not function if they differ.
   * When you flash a VBIOS, the V/F curve and fan curve will differ, so your current overclock may not be stable or lower than usual, and the fan speeds may differ.
-  * If your power goes out while flashing, there is a chance of bricking your card just like a motherboard BIOS flash.
+  * If your power goes out while flashing, there is a chance of bricking your card, just like a motherboard BIOS flash.
  ## How to Flash a VBIOS
   * Download [GPU-Z](https://www.techpowerup.com/gpuz/) and go to Advanced -> NVIDIA BIOS -> Power Limit -> Maximum.
   
@@ -184,8 +195,8 @@
  
      ![image](https://user-images.githubusercontent.com/69487009/155030699-7616020e-ac97-4ae0-9b26-9bd0ff8a379c.png)
   * There may be some XOC VBIOSes with a 1000w power limit, but these are highly discouraged unless you know what you are doing and have sufficient cooling/power.
-  * Once you have found a VBIOS, download it and [NVFlash](https://www.techpowerup.com/download/nvidia-nvflash/).
-  * Create a new folder in your home directory with any name and put the ROM and the contents of the extracted NVFlash folder inside of it. The folder should look like this. 
+  * After finding a VBIOS, download it and [NVFlash](https://www.techpowerup.com/download/nvidia-nvflash/).
+  * Create a new folder in your home directory with any name and put the ROM and the contents of the extracted NVFlash folder inside. The folder should look like this. 
    
      ![image](https://user-images.githubusercontent.com/69487009/155030951-b4ed2a12-f5e5-4e15-a655-73116b429701.png)
     
@@ -202,14 +213,14 @@
 # Miscellaneous
  ## Fixing a Boot Loop
   * Hold down shift and click restart.
-  * At the choose an option screen, go to Troubleshoot > Advanced options > Startup Settings > Restart. Finally, type `4` to boot into safe mode.
+  * At the Choose an option screen, go to Troubleshoot > Advanced options > Startup Settings > Restart. Finally, type `4` to boot into safe mode.
   
      ![image](https://user-images.githubusercontent.com/69487009/155035875-c7a04198-6f72-45a8-8c81-af7b1bac496e.png)
   * Go into MSI Afterburner and uncheck this to have your overclock not applied at startup. If you have this checked, uncheck it as well.
  
      ![image](https://user-images.githubusercontent.com/69487009/155035951-3d926aaf-ffb4-44db-9910-844f8b7ad50d.png)
   ## NVCleanstall/DDU
-  This is used when you suspect your drivers are causing issues and/or you want a less bloated driver.
+  This is used when you suspect your drivers are causing issues or want a less bloated driver.
    * Install the [latest drivers](https://www.nvidia.com/Download/index.aspx), [DDU](https://www.guru3d.com/files-details/display-driver-uninstaller-download.html), and [NVCleanstall](https://www.techpowerup.com/download/techpowerup-nvcleanstall/). 
    * Unplug your Ethernet/turn off Wi-Fi to ensure that Windows doesn’t install drivers on its own.
    * Hold down shift and click restart. Go to Troubleshoot > Advanced options > Startup Settings > Restart.
@@ -227,9 +238,11 @@
  * The most crucial thing about overclocking is experimentation; try different things like increasing voltage to get higher clocks or lower voltage to get lower temps and more consistent clocks.
  * Temps are important. GPUs should stay as cool as possible for longevity, audibility, and performance:
    * For starters, taking off your side panel can improve thermals in limited airflow scenarios; if they do, a case with more airflow will help thermals considerably.
-   * Repasting your GPU with a high-quality paste such as NT-H2, KPX, GELID GC-Extreme, or MX-4 (budget). It’ll last a long time and has an incredible impact on temperatures. Spreading the paste to ensure it covers the entire die is crucial.
-   * Deshrouding and adding fans such as Phanteks T30s, Noctua NF-A12x25s, or ARCTIC P12s (budget) are also an excellent way to improve temps as stock fans tend not to be that great.
+   * Repasting your GPU with a high-quality paste such as NT-H2, KPX, GELID GC-Extreme, or MX-4/6. It’ll last a long time and has an incredible impact on temperatures. Spreading the paste to ensure it covers the entire die is crucial.
+     
+       ![image](https://cdn.discordapp.com/attachments/714879622181028032/1044770544861589505/unknown.png)
+   * Deshrouding and adding fans such as Phanteks T30s, Noctua NF-A12x25s, or ARCTIC P12s are also an excellent way to improve temps as stock fans tend to be less than great.
    * A more aggressive fan curve on your CPU, GPU, or case can help airflow and thermals. Go as high as audibly tolerable.
    * Removing dust filters can help with airflow due to the misalignment of holes.
-   * Some GPU backplates act as an insulator instead of a heat dissipator, and replacing/removing them may be benefitting.
+   * Some GPU backplates act as insulators instead of heat dissipators, and replacing/removing them may be beneficial.
    * A PCI fan bracket mounted with fans blowing directly under the GPU may improve airflow.
