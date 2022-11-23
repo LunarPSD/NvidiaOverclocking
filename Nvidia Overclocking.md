@@ -43,7 +43,7 @@
   
      ![image](https://user-images.githubusercontent.com/69487009/155073843-d60e666a-f3b8-4422-91a8-e331f663270b.png)
   
-  5. If using a Lovelace GPU, disable ECC in the Nvidia Control Panel to get more performance (needs more testing).
+  5. If using a Lovelace GPU, disable ECC in the Nvidia Control Panel for more performance (needs more testing).
      
      ![image](https://cdn.discordapp.com/attachments/714879622181028032/1044790464554999828/image.png)
      
@@ -51,8 +51,8 @@
    * [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards): This software is the most widely used and robust. Other software may be lacking in certain features and are generally not recommended.
   ## Monitoring Software
    * [HWiNFO](https://www.hwinfo.com/download/): HWiNFO is the most frequently used monitor software as it presents the values of all the sensors available and is an excellent software to have when overclocking your CPU, RAM, and GPU.
-   * [GPU-Z](https://www.techpowerup.com/download/techpowerup-gpu-z/): GPU-Z is a software that will report the model, VBIOS, and the hardware specifics of your GPU.
-   * [OCCT](https://www.ocbase.com/download): OCCT is a piece of software that stress tests while providing sensor values from HWiNFO. OCCT can be used instead of HWiNFO while running an OCCT test.
+   * [GPU-Z](https://www.techpowerup.com/download/techpowerup-gpu-z/): GPU-Z is a software that reports the model, VBIOS, and the hardware specifics of your GPU.
+   * [OCCT](https://www.ocbase.com/download): OCCT stress tests while providing sensor values from HWiNFO. OCCT can be used instead of HWiNFO as well.
   ## Benchmarks
   ### Recommended
    * One of the best stress tests is just playing games. Unfortunately, there is no conclusive stress test for GPUs other than OCCT, and playing games is a great way to find instability.
@@ -103,7 +103,10 @@
   * Overclocking too much is dangerous: There is no such thing as overclocking a modern GPU with a hard voltage lock and a normal VBIOS too much. An overclock is only "bad" when unstable, fixed by stability testing.
   * Undervolting will lower performance: Undervolting will improve performance when power limited and reduce temperatures otherwise (12.5 (Pascal) - 15 MHz (Turing, Ampere, and Lovelace) increase for every 5 °C cooler).
   * Core voltage increases voltage used: The core voltage slider will generally not do much, but it increases the aggressiveness of the V/F curve and makes your GPU use the higher voltage points within the threshold of safe voltages of the card but does not work on most modern cards.
-  * Dragging the point at the correct voltage to your desired clock speed is a common way to undervolt. This is an [unoptimal way](https://www.youtube.com/watch?v=RH3FZXvBkiE) because of the effective clock speed <img align="center" src="https://cdn.discordapp.com/attachments/714879622181028032/874460000565739550/unknown.png"> being lower than the clock speed displayed <img align="center" src="https://cdn.discordapp.com/attachments/714879622181028032/945465118664323092/unknown.png"> when using this method. Instead, use the slider in Afterburner to change clock speeds.
+   * Dragging the point at the correct voltage to your desired clock speed is a common way to undervolt. This is an [unoptimal way](https://www.youtube.com/watch?v=RH3FZXvBkiE) because of the effective clock speed being lower than the clock speed displayed when using this method. Instead, use the slider in Afterburner to change clock speeds.   
+     <img align="center" src="https://cdn.discordapp.com/attachments/714879622181028032/1044888773558816838/image.png">
+   
+     <img align="center" src="https://cdn.discordapp.com/attachments/714879622181028032/945465118664323092/unknown.png">
   * The best or maximum overclock for a specific card: There is no best or maximum overclock. Every physical chip is different and will overclock differently, so copying settings is not advisable as there may be more headroom to overclock, or it may be unstable.
   * Undervolting reduces effective clocks on Lovelace: This is a misconception caused by improper undervolting and will not happen if undervolted properly.
 
@@ -122,7 +125,7 @@
   
   4. Test the overclock, see if it is stable in both benchmarks and games, and monitor the temperatures using HWiNFO and stay under 80 °C on the core and 95 °C for the hotspot.
   
-  5. If stable, increase core clock speeds in increments of +15 MHz (Turing + Ampere) /12.5 MHz (Pascal) using the slider or typing in a value. If the benchmarks or games crash, decrease clock speeds by the same amount and retest until you have reached stability. Temperatures and power limits will always be limiting factors. There is no “limit” on how far you can overclock; however, you will know you have reached the limit once you experience errors or crashes in stress tests and games. Remember that an overclock can be stable in one game but not another.
+  5. If stable, increase core clock speeds in increments of +15 MHz (Turing, Ampere, and Lovelace) /12.5 MHz (Pascal) using the slider or typing in a value. If the benchmarks or games crash, decrease clock speeds by the same amount and retest until you have reached stability. Temperatures and power limits will always be limiting factors. There is no “limit” on how far you can overclock; however, you will know you have reached the limit once you experience errors or crashes in stress tests and games. Remember that an overclock can be stable in one game but not another.
   ## Finding a Memory Clock
   * After testing the core overclock sufficiently and confirming its stability, you can increase the memory clock.
   
@@ -134,7 +137,7 @@
   
      ![image](https://user-images.githubusercontent.com/69487009/155003914-986b3fbb-6f76-4f8a-b4c5-0d5351b7d2f6.png)
      
-     2. Here are some examples of artifacts:
+     1. Here are some examples of artifacts:
   
         ![image](https://user-images.githubusercontent.com/69487009/156505132-831c5bbe-a475-4bc5-9065-e5230612cb8e.png)
      
@@ -154,7 +157,7 @@
   2. Select all the points past the voltage you want (900 mV) by holding down shift and left click and highlighting.
   3. Drag all the points down by selecting a point and dragging it down. Ensure the highest point on the part you are dragging down is lower than the highest point to its left.
  
-     3. Your curve should now look like this:
+     1. Your curve should now look like this:
        
        ![image](https://user-images.githubusercontent.com/69487009/155075101-33097614-e25c-4678-aa7f-342abfaaedff.png)
   
@@ -162,7 +165,7 @@
   
   5. Click this <img align="center" src="https://user-images.githubusercontent.com/69487009/155013987-f6c7f084-c4cb-4804-bc98-1786056959a7.png"> to have the overclock applied at startup.
   
-     5. Your curve should look like this:
+     1. Your curve should look like this:
  
        ![image](https://user-images.githubusercontent.com/69487009/155066400-0bce9ab3-da3a-431e-98e5-3ba9b88271d4.png)
        
