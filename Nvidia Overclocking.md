@@ -103,7 +103,7 @@
   * Overclocking too much is dangerous: There is no such thing as overclocking a modern GPU with a hard voltage lock and a normal VBIOS too much. An overclock is only "bad" when unstable, fixed by stability testing.
   * Undervolting will lower performance: Undervolting will improve performance when power limited and reduce temperatures otherwise (12.5 (Pascal) - 15 MHz (Turing, Ampere, and Lovelace) increase for every 5 °C cooler).
   * Core voltage increases voltage used: The core voltage slider will generally not do much, but it increases the aggressiveness of the V/F curve and makes your GPU use the higher voltage points within the threshold of safe voltages of the card but does not work on most modern cards.
-   * Dragging the point at the correct voltage to your desired clock speed is a common way to undervolt. This is an [unoptimal way](https://www.youtube.com/watch?v=RH3FZXvBkiE) because of the effective clock speed being lower than the clock speed displayed when using this method. Instead, use the slider in Afterburner to change clock speeds.   
+   * Dragging the point at the correct voltage to your desired clock speed is a common way to undervolt. This is an [unoptimal way](https://www.youtube.com/watch?v=RH3FZXvBkiE) because the effective clock speed is lower than the clock speed displayed when using this method. Instead, use the slider in Afterburner to change clock speeds.   
      <img align="center" src="https://cdn.discordapp.com/attachments/714879622181028032/1044888773558816838/image.png">
    
      <img align="center" src="https://cdn.discordapp.com/attachments/714879622181028032/945465118664323092/unknown.png">
@@ -114,6 +114,7 @@
 # Overclocking
   
   * **Before proceeding, ensure you have read the [Setup](#setup) portion of the guide.**
+  * You can combine an overclock with an undervolt or choose one over the other. An overclock with an undervolt will lead to more performance, however.
   ## Finding a Core Clock
   1. Open Afterburner and put the core clock offset to +75 as a baseline.
   
