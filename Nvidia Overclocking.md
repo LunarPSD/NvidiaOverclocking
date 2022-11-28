@@ -326,7 +326,7 @@
   * **Before proceeding, ensure you have read the [Setup](#setup) portion of the guide.**
   * You can combine an overclock with an undervolt or choose one over the other. An overclock with an undervolt will lead to more performance, however.
   ## Finding a Core Clock
-  1. Open Afterburner and put the core clock offset to +75 as a baseline. This baseline will generally be stable and 75 MHz ensures it fits with both the 12.5 MHz steps that Pascal uses and the 15 MHz steps that Turning, Ampere, and Lovelace use.
+  1. Open Afterburner and put the core clock offset to +75 as a baseline. This baseline will generally be stable, and 75 MHz ensures it fits with the 12.5 MHz steps Pascal uses and the 15 MHz steps that Turning, Ampere, and Lovelace use.
   
      ![image](https://user-images.githubusercontent.com/69487009/155863420-bc3c3d17-07b9-4992-b3d6-1550352a7bbd.png)
 
@@ -385,7 +385,7 @@
  
        ![image](https://user-images.githubusercontent.com/69487009/155013749-0e22d23b-4d01-4e3a-b253-374171d38ae2.png)
      
-  2. If you are power throttling in-game, lower voltage by 25 mV and retest. Once you are satisfied with temperatures and are not power throttling, you have found the optimum voltage. 25 mV is an arbitrary baseline value and can be changed to larger or smaller increments if desired.
+  2. If you are power throttling in-game, lower voltage by 25 mV and retest. Once you are satisfied with temperatures and are not power throttling, you have found the optimum voltage. 25 mV is an arbitrary baseline value and can be changed to larger or smaller increments.
   
      1. Lowering voltage by 25 mV means that you will be at 875 mV from 900 mV, and your curve should look like this:
  
@@ -452,7 +452,8 @@
  * The most crucial thing about overclocking is experimentation; try different things like increasing voltage to get higher clocks or lower voltage to get lower temps and more consistent clocks.
  * Temps are important. GPUs should stay as cool as possible for longevity, audibility, and performance:
    * For starters, taking off your side panel can improve thermals in limited airflow scenarios; if they do, a case with more airflow will help thermals considerably.
-   * Repasting your GPU with a high-quality paste such as NT-H2, KPX, GELID GC-Extreme, or MX-4/6. It’ll last a long time and has an incredible impact on temperatures. Spreading the paste to ensure it covers the entire die is crucial.
+   * Repasting your GPU with a high-quality paste such as NT-H2, KPX, GELID GC-Extreme, or MX-6. It’ll last a long time and has an incredible impact on temperatures. Spreading the paste to ensure it covers the entire die is crucial.
+   * Repadding with high-quality thermal pads such as Fujipoly Ultra Extreme (expensive), Gelid GP-Extreme, or Thermalright Extreme Odyssey helps to cool memory and is especially helpful for GDDR6X. Make sure you know which thickness your GPU uses or have measured it with a micrometer.
      
        ![image](https://cdn.discordapp.com/attachments/714879622181028032/1044770544861589505/unknown.png)
    * Deshrouding and adding fans such as Phanteks T30s, Noctua NF-A12x25s, or ARCTIC P12s are also an excellent way to improve temps as stock fans tend to be less than great.
