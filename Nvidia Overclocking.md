@@ -156,7 +156,7 @@
        ![image](https://user-images.githubusercontent.com/69487009/156475780-19ff599b-56da-4d43-ae22-3ac738e9bc05.png)
 
   2. Select all the points past the voltage you want (900 mV) by holding down shift and left click and highlighting.
-  3. Drag all the points down by selecting a point and dragging it down. Ensure the highest point on the part you are dragging down is lower than the highest point to its left.
+  3. Drag all the points down by selecting a point and dragging it down. Ensure the highest point on the part you are dragging down is lower than the highest point to its left. (Optionally, with everything selected including the maximum preferred voltage (ex. 900mV), click on 900mV - hold shift - press ENTER twice)
  
      1. Your curve should now look like this:
        
