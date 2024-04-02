@@ -45,7 +45,7 @@
   
   5. If using a Lovelace GPU, disable ECC in the Nvidia Control Panel for more performance (needs more testing).
      
-     ![image](https://cdn.discordapp.com/attachments/714879622181028032/1044790464554999828/image.png)
+     ![image](https://i.postimg.cc/Px8GdbbN/01-lovelace-ecc.png)
      
   ## Overclocking Software
    * [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards): This software is the most widely used and robust. Other software may be lacking in certain features and are generally not recommended.
@@ -56,7 +56,7 @@
   ## Benchmarks
   ### Recommended
    * One of the best stress tests is just playing games. Unfortunately, there is no conclusive stress test for GPUs other than OCCT, and playing games is a great way to find instability. Instability is when you have application crashes, freezes, driver crashes, BSODs, major stutters, or shutdowns. 
-   * [Superposition](https://benchmark.unigine.com/superposition): This benchmark will stress your GPU and VRAM well and is good at finding instability. One should use Superposition for reliable scores to see performance regressions. Make sure to set the preset so it maxes out the VRAM *without going over.* <img align="center" src="https://cdn.discordapp.com/attachments/873056719822008381/873380510393565224/unknown.png">
+   * [Superposition](https://benchmark.unigine.com/superposition): This benchmark will stress your GPU and VRAM well and is good at finding instability. One should use Superposition for reliable scores to see performance regressions. Make sure to set the preset so it maxes out the VRAM *without going over.* <img align="center" src="https://i.postimg.cc/RZXxdZVC/02-superposition-vram.png">
    
      ![image](https://user-images.githubusercontent.com/69487009/155036041-4eed7d4b-1103-4d88-876c-d5878cbaf70e.png)
    
@@ -68,11 +68,11 @@
    
      * V10: Go to the 3D Standard tab under test. Turn on error detection and shader complexity to 8. Next, decrease the GPU usage limit (%) until you barely (5% of the time) power throttle. Then, click start and leave it running for an hour.
      
-     ![image](https://cdn.discordapp.com/attachments/714879622181028032/1044787448024141864/image.png)
+     ![image](https://i.postimg.cc/3rmM6BJc/03-occt-standard.png)
      
      * V11: Go to the 3D Adaptive tab under test and set the values to the screenshot below. You can tweak these values to your GPU, such as the minimum and maximum intensity. Then, click start and leave it running for an hour.
      
-     ![image](https://cdn.discordapp.com/attachments/714879622181028032/1044786299078447114/image.png)
+     ![image](https://i.postimg.cc/gjvfZYTW/04-occt-adaptive.png)
 
   ### Avoid
    * Furmark: Draws a lot of power and doesn’t effectively test due to elevated temperatures and power limiting.
@@ -104,9 +104,9 @@
   * Undervolting will lower performance: Undervolting will improve performance when power limited and reduce temperatures otherwise (12.5 (Pascal) - 15 MHz (Turing, Ampere, and Lovelace) increase for every 5 °C cooler).
   * Core voltage increases voltage used: The core voltage slider will generally not do much, but it increases the aggressiveness of the V/F curve and makes your GPU use the higher voltage points within the threshold of safe voltages of the card but does not work on most modern cards.
    * Dragging the point at the correct voltage to your desired clock speed is a common way to undervolt. This is an [unoptimal way](https://www.youtube.com/watch?v=RH3FZXvBkiE) because the effective clock speed is lower than the clock speed displayed when using this method. Instead, use the slider in Afterburner to change clock speeds.
-     <img align="center" src="https://cdn.discordapp.com/attachments/714879622181028032/1044888773558816838/image.png">
+     <img align="center" src="https://i.postimg.cc/YS0KsBh6/05-effective-clock.png">
    
-     <img align="center" src="https://cdn.discordapp.com/attachments/714879622181028032/945465118664323092/unknown.png">
+     <img align="center" src="https://i.postimg.cc/LsWKdQ1r/06-core-clock.png">
   * The best or maximum overclock for a specific card: There is no best or maximum overclock. Every physical chip is different and will overclock differently, so copying settings is not advisable as there may be more headroom to overclock, or it may be unstable.
   * Undervolting reduces effective clocks on Lovelace: This is a misconception caused by improper undervolting and will not happen if undervolted properly.
 
@@ -244,7 +244,7 @@
    * For starters, taking off your side panel can improve thermals in limited airflow scenarios; if they do, a case with more airflow will help thermals considerably.
    * Repasting your GPU with a high-quality paste such as NT-H2, KPX, GELID GC-Extreme, or MX-4/6. It’ll last a long time and has an incredible impact on temperatures. Spreading the paste to ensure it covers the entire die is crucial.
      
-       ![image](https://cdn.discordapp.com/attachments/714879622181028032/1044770544861589505/unknown.png)
+       ![image](https://i.postimg.cc/SR0BRXVd/07-cinebench-chart.png)
    * Deshrouding and adding fans such as Phanteks T30s, Noctua NF-A12x25s, or ARCTIC P12s are also an excellent way to improve temps as stock fans tend to be less than great.
    * A more aggressive fan curve on your CPU, GPU, or case can help airflow and thermals. Go as high as audibly tolerable.
    * Removing dust filters can help with airflow due to the misalignment of holes.
@@ -255,4 +255,4 @@
   
   5. If using a Lovelace GPU, disable ECC in the Nvidia Control Panel for more performance (needs more testing).
      
-     ![image](https://cdn.discordapp.com/attachments/714879622181028032/1044790464554999828/image.png)
+     ![image](https://i.postimg.cc/Px8GdbbN/01-lovelace-ecc.png)
